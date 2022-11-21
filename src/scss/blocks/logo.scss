@@ -1,5 +1,9 @@
-@use '../mixins/responsive.scss';
+@use '../mixins/responsive.scss' as*;
 
 .logo {
     width: 70px;
+    
+    @include responsive(tablet){
+        width: 100px;
+    }
 }

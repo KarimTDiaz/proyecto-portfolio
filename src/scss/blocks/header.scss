@@ -7,13 +7,32 @@
 .header {
     height: 100vh;
     padding: 2rem 2rem 0;
+    position:relative;
     background-color: var(--primary-color);
     background-image: image.mobile('bg-mobile-header.svg');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 
     &__top {
         @include flexbox(flex, row, nowrap, space-between, center);
-        margin-bottom: 12rem;
+        margin-bottom: 10rem;
+    }
+    @include responsive(tablet){
+        background-image: image.tablet('bg-tablet-header.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        &__top{
+            margin-bottom: 25rem;
+        }
+    }
+    @include responsive(laptop){
+        background-image: image.desktop('bg-desktop-header.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        &__top{
+            margin-bottom: 10rem;
+            height: 150px;
+        }
     }
 }
