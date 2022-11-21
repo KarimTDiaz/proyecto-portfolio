@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CAMBIAR POR styles.min.css al finalizar el proyecto -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <header class="header">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- CAMBIAR POR styles.min.css al finalizar el proyecto -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <img src="assets/images/logo.svg" alt="logo" class="logo">
       <nav>
-        <ul class="menu">
+        <ul class="menu menu--show">
           <li class="menu__item">
-            <a href="#" class="menu__link">Item de ejemplo</a>
+            <a href="#" class="menu__link">HOME</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">SOBRE MI</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">PROYECTOS</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">CONTACTO</a>
           </li>
         </ul>
       </nav>
-    </header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
-  </body>
+      <div class="menu-icon" id="menu-icon">
+        <div class="menu-icon__bar" id="menu-icon-bar"></div>
+      </div>
+    </div>
+    <div class="main-title">
+      <span class="main-title__item">Hi,</span>
+      <span class="main-title__item">im</span>
+      <span class="main-title__item main-title__item--color">Karim</span>
+      <span class="main-title__item">front</span>
+      <span class="main-title__item">-</span>
+      <span class="main-title__item">end</span>
+      <span class="main-title__item main-title__item--color">web</span>
+      <span class="main-title__item">developer</span>
+    </div>
+  </header>
+  <main class="main"></main>
+  <footer class="footer"></footer>
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>

@@ -1,1 +1,19 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../functions/image.scss';
+@use '../mixins/pseudo.scss' as*;
 
+.main-title {
+    margin-right: 5rem;
+    font-family: var(--roboto);
+    font-size: var(--main-title);
+    font-weight: 700;
+    color: var(--white-text);
+
+    &__item {
+        &--color {
+            color: var(--secondary-color);
+        }
+    }
+}

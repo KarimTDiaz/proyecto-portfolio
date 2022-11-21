@@ -1,5 +1,11 @@
 :root {
-  /* Variables CSS */
+  --primary-color: hsl(16, 100%, 50%);
+  --secondary-color: hsl(311, 23%, 14%);
+  --white-text: hsl(0, 0%, 100%);
+  --grey-text: hsl(0, 0%, 85%);
 }
 
-/* Variables SASS */
+$primary-color: hsl(16, 100%, 50%);
+$secondary-color: hsl(311, 23%, 14%);
+$white-text: hsl(0, 0%, 100%);
+$grey-text: hsl(0, 0%, 85%);

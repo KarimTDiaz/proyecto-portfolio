@@ -1,1 +1,19 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../functions/image.scss';
+@use '../mixins/pseudo.scss' as*;
 
+.header {
+    height: 100vh;
+    padding: 2rem 2rem 0;
+    background-color: var(--primary-color);
+    background-image: image.mobile('bg-mobile-header.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__top {
+        @include flexbox(flex, row, nowrap, space-between, center);
+        margin-bottom: 12rem;
+    }
+}
