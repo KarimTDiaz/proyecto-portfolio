@@ -2,8 +2,4 @@
 
 .logo {
     width: 70px;
-    
-    @include responsive(tablet){
-        width: 100px;
-    }
 }

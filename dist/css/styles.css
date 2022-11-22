@@ -367,6 +367,7 @@ body {
 
 .main-title {
   width: 250px;
+  margin-bottom: 8rem;
   font-family: var(--roboto);
   font-size: var(--main-title);
   font-weight: 700;
@@ -410,6 +411,18 @@ body {
   }
 }
 
+.button {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 1px solid var(--white-text);
+  color: var(--white-text);
+  font-family: var(--roboto);
+}
+
 .header {
   height: 100vh;
   padding: 2rem 2rem 0;
@@ -434,7 +447,7 @@ body {
     background-repeat: no-repeat;
   }
   .header__top {
-    margin-bottom: 25rem;
+    margin-bottom: 15rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -444,8 +457,9 @@ body {
     background-repeat: no-repeat;
   }
   .header__top {
+    height: 100px;
     margin-bottom: 10rem;
-    height: 150px;
+    background-color: black;
   }
 }
 
@@ -465,20 +479,6 @@ body {
   transform: translateX(100%);
   transition: transform 2s;
 }
-@media screen and (min-width: 1024px) {
-  .menu {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    width: 500px;
-    margin-left: 95%;
-    position: initial;
-    transform: translateX(0);
-    background-image: none;
-  }
-}
 .menu__item {
   margin-bottom: 4rem;
 }
@@ -487,7 +487,7 @@ body {
   font-family: var(--monserrat);
   font-size: var(--menu-item);
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .menu__link {
     font-size: var(--menu-item-desktop);
   }
@@ -496,6 +496,22 @@ body {
   transform: translateX(0);
   transform-origin: right;
   transition-duration: 2s;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    width: 500px;
+    height: 150px;
+    padding: 0;
+    background-image: none;
+  }
+  .menu__item {
+    margin-bottom: 0;
+  }
 }
 .menu-icon {
   width: 40px;
@@ -547,11 +563,6 @@ body {
 .logo {
   width: 70px;
 }
-@media screen and (min-width: 640px) {
-  .logo {
-    width: 100px;
-  }
-}
 
 :root {
   --monserrat: "Montserrat", sans-serif;
@@ -561,7 +572,8 @@ body {
   --title: 1.25rem;
   --title-tablet: 2rem;
   --menu-item: 2rem;
-  --menu-item-desktop: 1.25rem;
+  --menu-item-desktop: 1rem;
+  --button:1rem;
 }
 
 :root {

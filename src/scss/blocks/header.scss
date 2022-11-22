@@ -23,7 +23,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         &__top{
-            margin-bottom: 25rem;
+            margin-bottom: 15rem;
         }
     }
     @include responsive(laptop){
@@ -31,8 +31,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         &__top{
+            height: 100px;
             margin-bottom: 10rem;
-            height: 150px;
+            background-color: black;
         }
     }
 }
