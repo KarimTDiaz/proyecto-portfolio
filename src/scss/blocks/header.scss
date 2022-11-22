@@ -5,15 +5,15 @@
 @use '../mixins/pseudo.scss' as*;
 
 .header {
+    position: relative;
     height: 100vh;
     padding: 2rem;
-    position: relative;
+    padding-bottom: 10rem;
     background-color: var(--primary-color);
     background-image: image.mobile('bg-mobile-header.svg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    padding-bottom: 10rem;
     clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 99%);
 
     &__top {

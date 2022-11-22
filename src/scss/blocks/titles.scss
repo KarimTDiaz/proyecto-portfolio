@@ -93,19 +93,20 @@
     }
 
     @include responsive(laptop) {
-        text-align: center;
         margin-left: auto;
         margin-right: auto;
+        text-align: center;
     }
 }
 
 .title {
-    color: var(--primary-color);
     font-family: var(--monserrat);
     font-size: var(--title);
+    color: var(--primary-color);
 
     &--writing {
         font-family: var(--roboto);
+        font-size: var(--menu-item);
         color: var(--white-text);
     }
 

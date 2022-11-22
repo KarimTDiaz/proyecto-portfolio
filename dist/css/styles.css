@@ -405,19 +405,20 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .main-title {
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 }
 
 .title {
-  color: var(--primary-color);
   font-family: var(--monserrat);
   font-size: var(--title);
+  color: var(--primary-color);
 }
 .title--writing {
   font-family: var(--roboto);
+  font-size: var(--menu-item);
   color: var(--white-text);
 }
 
@@ -428,27 +429,47 @@ body {
 }
 
 .button {
-  width: 250px;
+  position: relative;
   display: block;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem 1rem;
   text-align: center;
-  padding: 1rem 2rem;
+  font-family: var(--roboto);
+  font-weight: 700;
   border: 1px solid var(--white-text);
   color: var(--white-text);
-  font-family: var(--roboto);
+}
+.button:hover {
+  color: var(--primary-color);
+}
+.button--animation::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  background-color: var(--white-text);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.button--animation:hover::before {
+  width: 100%;
 }
 
 .header {
+  position: relative;
   height: 100vh;
   padding: 2rem;
-  position: relative;
+  padding-bottom: 10rem;
   background-color: var(--primary-color);
   background-image: url("../assets/images/mobile/bg-mobile-header.svg");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  padding-bottom: 10rem;
   clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 99%);
 }
 .header__top {
@@ -495,6 +516,7 @@ body {
   background-image: linear-gradient(var(--primary-color), var(--secondary-color));
   transform: translateX(100%);
   transition: transform 2s;
+  z-index: 1;
 }
 .menu__item {
   margin-bottom: 4rem;
@@ -584,21 +606,43 @@ body {
   z-index: -1;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
 }
+@media screen and (min-width: 1024px) {
+  .image {
+    clip-path: none;
+    position: static;
+    width: 30%;
+    z-index: 0;
+  }
+}
 
 .about__data {
-  position: relative;
-  top: -148px;
-  z-index: -2;
-  padding: 4rem 3rem 0;
   display: flex;
   flex-flow: row-reverse nowrap;
   justify-content: space-between;
   align-items: baseline;
-  height: 560px;
+  position: relative;
+  top: -300px;
+  z-index: -2;
+  height: 750px;
+  padding: 15rem 3rem 0;
   background-color: var(--secondary-color);
   background-image: url("../assets/images/mobile/bg-mobile-about.svg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .about__data {
+    background-image: none;
+    z-index: 0;
+    top: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about {
+    display: flex;
+    background-color: var(--secondary-color);
+    z-index: 0;
+  }
 }
 
 .logo {
@@ -607,7 +651,7 @@ body {
 
 .decoration {
   position: absolute;
-  top: 50px;
+  bottom: 0;
   left: 0;
 }
 

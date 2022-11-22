@@ -12,7 +12,7 @@ menuIcon.addEventListener('click', () => {
 })
 
 
-const titles = ['COLABORATIVO', 'TRABAJO EN EQUIPO', 'ORGANIZACION', 'APASIONADO'];
+const titles = ['Colaborativo', 'Trabajo en equipo', 'Organización', 'Apasionado'];
 let letterCount = 0;
 let titlesIndex = 0;
 
