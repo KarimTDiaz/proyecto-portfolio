@@ -6,88 +6,107 @@
 
 .main-title {
     width: 250px;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     font-family: var(--roboto);
     font-size: var(--main-title);
     font-weight: 700;
     color: var(--white-text);
 
     &__item {
-      
-        &:hover{
+
+        &:hover {
             animation: move linear 2000ms;
             transform: rotate(45deg)
         }
-        
+
         &--color {
             color: var(--secondary-color);
         }
-       
+
     }
-    @keyframes move{
-        0%{
+
+    @keyframes move {
+        0% {
             text-shadow:
-            4px -4px 0 var(--white-text),
-            3px -3px 0 var(--white-text),
-            2px -2px 0 var(--white-text),
-            1px -1px 0 var(--white-text),
-            -4px 4px 0 var(--secondary-color),
-            -3px 3px 0 var(--secondary-color),
-            -2px 2px 0 var(--secondary-color),
-            -1px 1px 0 var(--secondary-color);
+                4px -4px 0 var(--white-text),
+                3px -3px 0 var(--white-text),
+                2px -2px 0 var(--white-text),
+                1px -1px 0 var(--white-text),
+                -4px 4px 0 var(--secondary-color),
+                -3px 3px 0 var(--secondary-color),
+                -2px 2px 0 var(--secondary-color),
+                -1px 1px 0 var(--secondary-color);
         }
-        25%{
+
+        25% {
             text-shadow:
-            -4px -4px 0 var(--secondary-color),
-            -3px -3px 0 var(--secondary-color),
-            -2px -2px 0 var(--secondary-color),
-            -1px -1px 0 var(--secondary-color),
-            4px 4px 0 var(--white-text),
-            3px 3px 0 var(--white-text),
-            2px 2px 0 var(--white-text),
-            1px 1px 0 var(--white-text);
+                -4px -4px 0 var(--secondary-color),
+                -3px -3px 0 var(--secondary-color),
+                -2px -2px 0 var(--secondary-color),
+                -1px -1px 0 var(--secondary-color),
+                4px 4px 0 var(--white-text),
+                3px 3px 0 var(--white-text),
+                2px 2px 0 var(--white-text),
+                1px 1px 0 var(--white-text);
         }
-        50%{
-            text-shadow: 
-            -4px 4px 0 var(--white-text),
-            -3px 3px 0 var(--white-text),
-            -2px 2px 0 var(--white-text),
-            -1px 1px 0 var(--white-text),
-            4px -4px 0 var(--secondary-color),
-            3px -3px 0 var(--secondary-color),
-            2px -2px 0 var(--secondary-color),
-            1px -1px 0 var(--secondary-color);
-        }
-        75%{
+
+        50% {
             text-shadow:
-            4px 4px 0 var(--secondary-color),
-            3px 3px 0 var(--secondary-color),
-            2px 2px 0 var(--secondary-color),
-            1px 1px 0 var(--secondary-color),
-            -4px -4px 0 var(--white-text),
-            -3px -3px 0 var(--white-text),
-            -2px -2px 0 var(--white-text),
-            -1px -1px 0 var(--white-text);
+                -4px 4px 0 var(--white-text),
+                -3px 3px 0 var(--white-text),
+                -2px 2px 0 var(--white-text),
+                -1px 1px 0 var(--white-text),
+                4px -4px 0 var(--secondary-color),
+                3px -3px 0 var(--secondary-color),
+                2px -2px 0 var(--secondary-color),
+                1px -1px 0 var(--secondary-color);
         }
-        100%{
+
+        75% {
             text-shadow:
-            4px -4px 0 var(--white-text),
-            3px -3px 0 var(--white-text),
-            2px -2px 0 var(--white-text),
-            1px -1px 0 var(--white-text),
-            -4px 4px 0 var(--secondary-color),
-            -3px 3px 0 var(--secondary-color),
-            -2px 2px 0 var(--secondary-color),
-            -1px 1px 0 var(--secondary-color);
+                4px 4px 0 var(--secondary-color),
+                3px 3px 0 var(--secondary-color),
+                2px 2px 0 var(--secondary-color),
+                1px 1px 0 var(--secondary-color),
+                -4px -4px 0 var(--white-text),
+                -3px -3px 0 var(--white-text),
+                -2px -2px 0 var(--white-text),
+                -1px -1px 0 var(--white-text);
+        }
+
+        100% {
+            text-shadow:
+                4px -4px 0 var(--white-text),
+                3px -3px 0 var(--white-text),
+                2px -2px 0 var(--white-text),
+                1px -1px 0 var(--white-text),
+                -4px 4px 0 var(--secondary-color),
+                -3px 3px 0 var(--secondary-color),
+                -2px 2px 0 var(--secondary-color),
+                -1px 1px 0 var(--secondary-color);
         }
     }
-    @include responsive(tablet){
+
+    @include responsive(tablet) {
         width: 600px;
         font-size: var(--main-title-tablet);
     }
-    @include responsive(laptop){
+
+    @include responsive(laptop) {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.title {
+    color: var(--primary-color);
+    font-family: var(--monserrat);
+    font-size: var(--title);
+
+    &--writing {
+        font-family: var(--roboto);
+        color: var(--white-text);
+    }
+
 }

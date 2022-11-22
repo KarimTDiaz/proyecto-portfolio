@@ -1,0 +1,26 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../functions/image.scss';
+@use '../mixins/pseudo.scss' as*;
+
+.image {
+    position: relative;
+    top: -100px;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+}
+
+.about {
+    &__data {
+        position: relative;
+        top: -148px;
+        z-index: -2;
+        padding: 4rem 3rem 0;
+        @include flexbox(flex, row-reverse, nowrap, space-between, baseline);
+        height: 560px;
+        background-color: var(--secondary-color);
+        background-image: image.mobile('bg-mobile-about.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

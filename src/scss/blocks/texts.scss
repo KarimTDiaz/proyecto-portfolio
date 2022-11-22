@@ -1,1 +1,8 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
 
+.text {
+    color: var(--grey-text);
+    font-family: var(--monserrat);
+    line-height: 1.5rem;
+}

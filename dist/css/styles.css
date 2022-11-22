@@ -367,7 +367,7 @@ body {
 
 .main-title {
   width: 250px;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   font-family: var(--roboto);
   font-size: var(--main-title);
   font-weight: 700;
@@ -411,6 +411,22 @@ body {
   }
 }
 
+.title {
+  color: var(--primary-color);
+  font-family: var(--monserrat);
+  font-size: var(--title);
+}
+.title--writing {
+  font-family: var(--roboto);
+  color: var(--white-text);
+}
+
+.text {
+  color: var(--grey-text);
+  font-family: var(--monserrat);
+  line-height: 1.5rem;
+}
+
 .button {
   width: 250px;
   display: block;
@@ -425,13 +441,15 @@ body {
 
 .header {
   height: 100vh;
-  padding: 2rem 2rem 0;
+  padding: 2rem;
   position: relative;
   background-color: var(--primary-color);
   background-image: url("../assets/images/mobile/bg-mobile-header.svg");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  padding-bottom: 10rem;
+  clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 99%);
 }
 .header__top {
   display: flex;
@@ -459,7 +477,6 @@ body {
   .header__top {
     height: 100px;
     margin-bottom: 10rem;
-    background-color: black;
   }
 }
 
@@ -508,6 +525,7 @@ body {
     height: 150px;
     padding: 0;
     background-image: none;
+    transform: translateX(0);
   }
   .menu__item {
     margin-bottom: 0;
@@ -515,6 +533,11 @@ body {
 }
 .menu-icon {
   width: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
 }
 .menu-icon__bar {
   position: relative;
@@ -554,14 +577,38 @@ body {
 .menu-icon__bar--show {
   background-color: transparent;
 }
-@media screen and (min-width: 1024px) {
-  .menu-icon__bar {
-    display: none;
-  }
+
+.image {
+  position: relative;
+  top: -100px;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+}
+
+.about__data {
+  position: relative;
+  top: -148px;
+  z-index: -2;
+  padding: 4rem 3rem 0;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 560px;
+  background-color: var(--secondary-color);
+  background-image: url("../assets/images/mobile/bg-mobile-about.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .logo {
   width: 70px;
+}
+
+.decoration {
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
 
 :root {

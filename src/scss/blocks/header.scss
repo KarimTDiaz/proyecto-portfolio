@@ -6,34 +6,39 @@
 
 .header {
     height: 100vh;
-    padding: 2rem 2rem 0;
-    position:relative;
+    padding: 2rem;
+    position: relative;
     background-color: var(--primary-color);
     background-image: image.mobile('bg-mobile-header.svg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    padding-bottom: 10rem;
+    clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 99%);
 
     &__top {
         @include flexbox(flex, row, nowrap, space-between, center);
         margin-bottom: 10rem;
     }
-    @include responsive(tablet){
+
+    @include responsive(tablet) {
         background-image: image.tablet('bg-tablet-header.svg');
         background-size: cover;
         background-repeat: no-repeat;
-        &__top{
+
+        &__top {
             margin-bottom: 15rem;
         }
     }
-    @include responsive(laptop){
+
+    @include responsive(laptop) {
         background-image: image.desktop('bg-desktop-header.svg');
         background-size: cover;
         background-repeat: no-repeat;
-        &__top{
+
+        &__top {
             height: 100px;
             margin-bottom: 10rem;
-            background-color: black;
         }
     }
 }
