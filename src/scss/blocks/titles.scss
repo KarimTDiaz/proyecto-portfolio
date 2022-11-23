@@ -7,16 +7,17 @@
 .main-title {
     width: 250px;
     margin-bottom: 4rem;
-    font-family: var(--roboto);
+    font-family: var(--secondary-font);
     font-size: var(--main-title);
     font-weight: 700;
     color: var(--white-text);
 
     &__item {
-
-        &:hover {
-            animation: move linear 2000ms;
-            transform: rotate(45deg)
+        @include hover {
+            &:hover {
+                animation: move linear 2000ms;
+                transform: rotate(45deg)
+            }
         }
 
         &--color {
@@ -100,12 +101,12 @@
 }
 
 .title {
-    font-family: var(--monserrat);
+    font-family: var(--primary-font);
     font-size: var(--title);
     color: var(--primary-color);
 
     &--writing {
-        font-family: var(--roboto);
+        font-family: var(--secondary-font);
         font-size: var(--menu-item);
         color: var(--white-text);
     }
