@@ -1,6 +1,15 @@
+@use '../mixins/responsive.scss' as*;
+
 .decoration {
     position: absolute;
     bottom: 0;
     left: 0;
+    @include responsive(laptop){
+    left: auto;
+    right: 0;
+    bottom:-220px;
+    
+
+    }
 
 }

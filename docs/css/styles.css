@@ -433,6 +433,11 @@ body {
   font-family: var(--primary-font);
   line-height: 1.5rem;
 }
+@media screen and (min-width: 1024px) {
+  .text {
+    font-size: var(--text-m);
+  }
+}
 
 .button {
   position: relative;
@@ -477,8 +482,7 @@ body {
   height: 100vh;
   z-index: -1;
   width: 100%;
-  padding: 2rem;
-  padding-bottom: 10rem;
+  padding: 2rem 2rem 10rem;
   background-color: var(--primary-color);
   background-image: url("../assets/images/mobile/bg-mobile-header.svg");
   background-size: cover;
@@ -536,7 +540,7 @@ body {
 }
 .menu__link {
   color: var(--white-text);
-  font-family: var(--monserrat);
+  font-family: var(--primary-font);
   font-size: var(--menu-item);
 }
 @media screen and (min-width: 1024px) {
@@ -614,21 +618,19 @@ body {
 }
 
 .image {
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 89%);
   filter: grayscale(1);
 }
 @media screen and (min-width: 1024px) {
   .image {
     clip-path: none;
-    width: 300px;
+    width: 450px;
+    margin-left: 10rem;
   }
 }
 
 .about {
   position: relative;
-  top: -100px;
-  z-index: -1;
-  clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 99%);
 }
 .about__data {
   display: flex;
@@ -652,8 +654,10 @@ body {
     background-image: url("../assets/images/tablet/bg-tablet-about.svg");
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .about__data {
+    z-index: var(--z-index-10);
+    padding-right: 10rem;
     background-image: none;
     background-color: transparent;
   }
@@ -661,10 +665,15 @@ body {
 @media screen and (min-width: 1024px) {
   .about {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
     background-color: var(--secondary-color);
     background-image: url("../assets/images/desktop/bg-desktop-about.svg");
     background-size: cover;
     background-repeat: no-repeat;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   }
 }
 
@@ -677,6 +686,13 @@ body {
   bottom: 0;
   left: 0;
 }
+@media screen and (min-width: 1024px) {
+  .decoration {
+    left: auto;
+    right: 0;
+    bottom: -220px;
+  }
+}
 
 :root {
   --primary-font: "Montserrat", sans-serif;
@@ -685,6 +701,8 @@ body {
   --main-title-tablet: 6rem;
   --title: 1.25rem;
   --title-tablet: 2rem;
+  --text-s:1rem;
+  --text-m:1.5rem;
   --menu-item: 2rem;
   --menu-item-desktop: 1rem;
   --button: 1rem;

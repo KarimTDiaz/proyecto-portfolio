@@ -4,22 +4,18 @@
 @use '../mixins/pseudo.scss' as*;
 
 .image {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 89%);
     filter: grayscale(1);
 
     @include responsive(laptop) {
         clip-path: none;
-        width: 300px;
+        width: 450px;
+        margin-left: 10rem;
     }
 }
 
 .about {
     position: relative;
-    top: -100px;
-    z-index: -1;
-    clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 99%);
-
-
     &__data {
         @include flexbox(flex, row-reverse, nowrap, space-between, baseline);
         position: relative;
@@ -38,17 +34,23 @@
             background-image: image.tablet('bg-tablet-about.svg');
         }
 
-        @include responsive(desktop) {
+        @include responsive(laptop) {
+            z-index: var(--z-index-10);
+           
+            padding-right: 10rem;
             background-image: none;
             background-color: transparent;
+           
         }
     }
 
     @include responsive(laptop) {
-        display: flex;
+        @include flexbox(flex,row,nowrap,space-between,center);
+        height: 800px;
         background-color: var(--secondary-color);
         background-image: image.desktop('bg-desktop-about.svg');
         background-size: cover;
         background-repeat: no-repeat;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
     }
 }

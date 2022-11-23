@@ -23,7 +23,7 @@
 
     &__link {
         color: var(--white-text);
-        font-family: var(--monserrat);
+        font-family: var(--primary-font);
         font-size: var(--menu-item);
 
         @include responsive(laptop) {
