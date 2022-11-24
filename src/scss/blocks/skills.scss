@@ -1,0 +1,35 @@
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../functions/image.scss';
+
+.skills {
+    @include flexbox(flex, column, nowrap, center, center);
+    position: relative;
+    top: -100px;
+    padding: 5rem 3rem;
+    background-color: var(--primary-color);
+    background-image: image.mobile('bg-skilss-mobile-2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include responsive(tablet) {
+        top: -150px;
+        padding: 5rem 10rem;
+        font-size: var(--text-m);
+        background-image: image.tablet('bg-skilss-mobile-2.svg');
+    }
+
+    @include responsive(desktop) {
+        @include flexbox(flex, row, nowrap, space-evenly, center);
+        gap: 10rem;
+        top: 0;
+
+        padding: 5rem 15rem;
+        background-image: image.desktop('bg-desktop-skills-2.svg');
+
+        &__data {
+            width: 440px;
+        }
+    }
+}

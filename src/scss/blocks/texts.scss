@@ -5,7 +5,9 @@
     color: var(--grey-text);
     font-family: var(--primary-font);
     line-height: 1.5rem;
-    @include responsive(laptop){
+
+    @include responsive(laptop) {
         font-size: var(--text-m);
+        line-height: 1.8rem;
     }
 }

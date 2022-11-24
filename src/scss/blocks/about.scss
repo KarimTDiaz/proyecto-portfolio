@@ -16,6 +16,7 @@
 
 .about {
     position: relative;
+
     &__data {
         @include flexbox(flex, row-reverse, nowrap, space-between, baseline);
         position: relative;
@@ -36,16 +37,16 @@
 
         @include responsive(laptop) {
             z-index: var(--z-index-10);
-           
+            width: 60rem;
             padding-right: 10rem;
             background-image: none;
             background-color: transparent;
-           
+
         }
     }
 
     @include responsive(laptop) {
-        @include flexbox(flex,row,nowrap,space-between,center);
+        @include flexbox(flex, row, nowrap, space-between, center);
         height: 800px;
         background-color: var(--secondary-color);
         background-image: image.desktop('bg-desktop-about.svg');
