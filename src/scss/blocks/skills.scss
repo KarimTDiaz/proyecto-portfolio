@@ -20,7 +20,7 @@
         background-image: image.tablet('bg-skilss-mobile-2.svg');
     }
 
-    @include responsive(desktop) {
+    @include responsive(laptop) {
         @include flexbox(flex, row, nowrap, space-evenly, center);
         gap: 10rem;
         top: 0;

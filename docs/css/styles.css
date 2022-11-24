@@ -639,7 +639,7 @@ body {
     background-image: url("../assets/images/tablet/bg-skilss-mobile-2.svg");
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .skills {
     display: flex;
     flex-flow: row nowrap;
