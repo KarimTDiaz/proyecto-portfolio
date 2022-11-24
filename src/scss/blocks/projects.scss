@@ -1,0 +1,19 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../functions/image.scss';
+@use '../mixins/pseudo.scss' as*;
+
+.projects{
+    position:relative;
+    top: -100px;
+    padding: 5rem 4rem;
+    background-color: var(--secondary-color);
+    background-image: image.mobile('bg-mobile-projects.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include responsive(tablet){
+        top: -150px;
+        background-image: image.tablet('bg-tablet-projects.svg');
+    }
+}

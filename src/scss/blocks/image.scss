@@ -1,0 +1,15 @@
+@use '../mixins/responsive.scss' as*;
+
+.image {
+    &--profile{
+        clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 89%);
+        filter: grayscale(1);
+    
+        @include responsive(laptop) {
+            clip-path: none;
+            width: 450px;
+            margin-left: 10rem;
+        }
+
+    }
+}

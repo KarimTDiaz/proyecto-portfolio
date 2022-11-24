@@ -1,0 +1,14 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../functions/image.scss';
+@use '../mixins/pseudo.scss' as*;
+
+.gallery{
+    display: grid;
+    gap: 5rem;
+    justify-content: center;
+    padding-top: 3rem;
+    @include responsive(tablet){
+        grid-template-columns: repeat(2,249px);
+    }
+}

@@ -4,11 +4,18 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    &--projects{
+        top: 0;
+        left: auto;
+        right: 0;
+        @include responsive(tablet){
+            left: 0;
+        }
+    }
 
     @include responsive(laptop) {
         left: auto;
         right: 0px;
         bottom: -225px;
     }
-
 }

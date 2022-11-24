@@ -3,16 +3,7 @@
 @use '../functions/image.scss';
 @use '../mixins/pseudo.scss' as*;
 
-.image {
-    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 89%);
-    filter: grayscale(1);
 
-    @include responsive(laptop) {
-        clip-path: none;
-        width: 450px;
-        margin-left: 10rem;
-    }
-}
 
 .about {
     position: relative;
