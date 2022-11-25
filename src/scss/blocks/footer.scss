@@ -1,1 +1,8 @@
-/* ESTILOS DEL FOOTER */
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../functions/image.scss';
+
+.footer{
+    height: 200px;
+}

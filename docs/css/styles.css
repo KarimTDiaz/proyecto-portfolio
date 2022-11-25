@@ -540,7 +540,10 @@ body {
   }
 }
 
-/* ESTILOS DEL FOOTER */
+.footer {
+  height: 200px;
+}
+
 .menu {
   display: flex;
   flex-flow: column nowrap;
@@ -556,6 +559,17 @@ body {
   transform: translateX(100%);
   transition: transform 1s;
   z-index: 1;
+}
+.menu--footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+  height: 200px;
+  padding: 0;
+  background-image: none;
+  transform: translateX(0);
 }
 .menu__item {
   margin-bottom: 4rem;
