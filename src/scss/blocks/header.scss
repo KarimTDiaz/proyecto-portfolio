@@ -1,46 +1,42 @@
-@use '../mixins/flexbox.scss' as*;
-@use '../mixins/responsive.scss' as*;
-@use '../mixins/hover.scss' as*;
+@use '../mixins/flexbox.scss' as *;
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
 @use '../functions/image.scss';
-@use '../mixins/pseudo.scss' as*;
+@use '../mixins/pseudo.scss' as *;
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: -1;
-    width: 100%;
-    padding: 2rem 2rem 10rem;
-    background-color: var(--primary-color);
-    background-image: image.mobile('bg-mobile-header.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  width: 100%;
+  padding: 2rem 2rem 10rem;
+  background-color: var(--primary-color);
+  background-image: image.mobile('bg-mobile-header.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 
-    &__top {
-        @include flexbox(flex, row, nowrap, space-between, center);
-        margin-bottom: 10rem;
-    }
+  @include responsive(tablet) {
+    background-image: image.tablet('bg-tablet-header.svg');
+  }
+
+  @include responsive(laptop) {
+    background-image: image.desktop('bg-desktop-header.svg');
+  }
+
+  &__top {
+    @include flexbox(flex, row, nowrap, space-between, center);
+    margin-bottom: 10rem;
 
     @include responsive(tablet) {
-        background-image: image.tablet('bg-tablet-header.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        &__top {
-            margin-bottom: 15rem;
-        }
+      margin-bottom: 15rem;
     }
 
     @include responsive(laptop) {
-        background-image: image.desktop('bg-desktop-header.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        &__top {
-            height: 100px;
-            margin-bottom: 10rem;
-        }
+      height: 100px;
+      margin-bottom: 10rem;
     }
+  }
 }
