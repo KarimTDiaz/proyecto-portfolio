@@ -1,0 +1,23 @@
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as*;
+
+.contact{
+    position: relative;
+    top: -120px;
+    padding: 3rem 3rem 5rem;
+    background-color: var(--secondary-color);
+    @include responsive(tablet){
+        top: -150px;
+        padding: 5rem 5rem 5rem;
+    }
+    @include responsive(laptop){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10rem;
+        top: -80px;
+        padding: 5rem 20rem 5rem;
+        &__data{
+        width: 400px;
+        }
+    }
+}

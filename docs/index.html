@@ -70,7 +70,7 @@
       </div>
     </article>
     <article class="skills">
-      <img src="assets/images/skills-circle-2.svg" alt="" class="vector vector-skill">
+      <img src="assets/images/circle-skills-def.svg" alt="" class="vector vector-skill">
       <p class="text skills__data">Me desenvuelvo bien con los lenguajes que he aprendido a utilizar en el mastter de
         desarrollo web
         front-end impartido en la escuela Trazos, html ,css y JavaScript, optimizando su uso con preprocesadores como
@@ -78,6 +78,7 @@
     </article>
     <article class="projects">
       <picture>
+        <source media="(min-width:1024px )" srcset="assets/images/desktop/deco-desktop-projects-left.svg">
         <source media="(min-width:640px)" srcset="assets/images/tablet/deco-tablet-projects.svg">
         <source media="(min-width:360px)" srcset="assets/images/mobile/deco-mobile-projects.svg">
         <img src="assets/images/mobile/deco-mobile-projects.svg" alt="Decoracion" class="decoration decoration--projects">
@@ -134,9 +135,53 @@
           </picture>
         </div>
       </div>
+      <img src="assets/images/desktop/deco-desktop-projects-right.svg" alt="decoracion" class="decoration decoration--projects-right">
+    </article>
+    <article class="contact">
+      <div class="contact__data">
+      <h2 class="title title--contact">CONTACTA CONMIGO</h2>
+      <p class="text">Para mas información, escríbeme un correo</p>
+    </div>
+      <div class="form-container">
+        <form id="form" class="form">
+          <div class="form__field">
+            <label for="name" class="text text--smaller">NOMBRE</label>
+            <input type="text" id="name" name="name" class="form__input">
+          </div>
+          <div class="form__field">
+            <label for="email" class="text text--smaller">EMAIL</label>
+            <input type="text" id="email" name="number" class="form__input">
+          </div>
+          <div class="form__field">
+            <label for="text-area" class="text text--smaller">MENSAJE</label>
+            <textarea name="text-area" id="text-area" class="text-area"></textarea>
+          </div>
+          <div class="form__field">
+            <input type="submit" value="ENVIAR" class="button button--form">
+          </div>
+        </form>
+      </div>
     </article>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <nav>
+      <ul class="menu menu--footer" id="menu">
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">HOME</a>
+        </li>
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">SOBRE MI</a>
+        </li>
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">PROYECTOS</a>
+        </li>
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">CONTACTO</a>
+        </li>
+      </ul>
+    </nav>
+
+  </footer>
   <script src="js/scripts.js"></script>
 </body>
 

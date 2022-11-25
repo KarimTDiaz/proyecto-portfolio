@@ -9,11 +9,11 @@
         animation-timing-function: linear;
 
         @include responsive(tablet) {
-            width: 250px;
+            width: 15.625rem;
         }
 
         @include responsive(tablet) {
-            width: 400px;
+            width: 25rem;
         }
     }
 }

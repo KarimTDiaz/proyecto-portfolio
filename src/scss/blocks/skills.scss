@@ -24,10 +24,9 @@
         @include flexbox(flex, row, nowrap, space-evenly, center);
         gap: 10rem;
         top: 0;
-
         padding: 5rem 15rem;
         background-image: image.desktop('bg-desktop-skills-2.svg');
-
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
         &__data {
             width: 440px;
         }

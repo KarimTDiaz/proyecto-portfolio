@@ -6,10 +6,20 @@
     left: 0;
     &--projects{
         top: 0;
-        left: auto;
-        right: 0;
+        left: 0;
+        transform: translateX(calc(100vw - 100%));
+        &-right{
+            display: none;
+        }
         @include responsive(tablet){
-            left: 0;
+            transform: translateX(0);
+        }
+        @include responsive(laptop){
+            transform: translate(calc(-100vw + 102%),calc(1200px - 105%));
+            &-right{
+                display: block;
+                top: 80px;
+            }
         }
     }
 

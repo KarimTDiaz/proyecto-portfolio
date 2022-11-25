@@ -7,8 +7,12 @@
     display: grid;
     gap: 5rem;
     justify-content: center;
+    justify-items: center;
     padding-top: 3rem;
     @include responsive(tablet){
-        grid-template-columns: repeat(2,249px);
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include responsive(laptop){
+        grid-template-columns: repeat(3,1fr);
     }
 }

@@ -110,5 +110,8 @@
         font-size: var(--menu-item);
         color: var(--white-text);
     }
+    @include responsive(tablet){
+        font-size: var(--title-tablet);
+    }
 
 }

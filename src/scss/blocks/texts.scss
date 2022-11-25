@@ -5,9 +5,15 @@
     color: var(--grey-text);
     font-family: var(--primary-font);
     line-height: 1.5rem;
+    &--smaller{
+        font-size: var(--text-xs);
+    }
 
-    @include responsive(laptop) {
+    @include responsive(tablet) {
         font-size: var(--text-m);
         line-height: 1.8rem;
+        &--smaller{
+            font-size: var(--text-s);
+        }
     }
 }

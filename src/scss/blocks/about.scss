@@ -22,17 +22,17 @@
 
         @include responsive(tablet) {
             top: -150px;
-            padding: 15rem 5rem 0;
+            padding: 8rem 5rem 0;
             background-image: image.tablet('bg-tablet-about.svg');
         }
 
         @include responsive(laptop) {
             z-index: var(--z-index-10);
             width: 60rem;
+            padding-top: 15rem;
             padding-right: 10rem;
             background-image: none;
             background-color: transparent;
-
         }
     }
 
