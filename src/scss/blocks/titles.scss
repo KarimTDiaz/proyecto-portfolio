@@ -8,7 +8,7 @@
     width: 250px;
     margin-bottom: 4rem;
     font-family: var(--secondary-font);
-    font-size: var(--main-title);
+    font-size: var(--title-l);
     font-weight: 700;
     color: var(--white-text);
 
@@ -19,11 +19,9 @@
                 transform: rotate(45deg)
             }
         }
-
         &--color {
             color: var(--secondary-color);
         }
-
     }
 
     @keyframes move {
@@ -90,7 +88,7 @@
 
     @include responsive(tablet) {
         width: 600px;
-        font-size: var(--main-title-tablet);
+        font-size: var(--title-xl);
     }
 
     @include responsive(laptop) {
@@ -102,16 +100,16 @@
 
 .title {
     font-family: var(--primary-font);
-    font-size: var(--title);
+    font-size: var(--title-s);
     color: var(--primary-color);
 
     &--writing {
         font-family: var(--secondary-font);
-        font-size: var(--menu-item);
+        font-size: var(--title-m);
         color: var(--white-text);
     }
     @include responsive(tablet){
-        font-size: var(--title-tablet);
+        font-size: var(--title-m);
     }
 
 }

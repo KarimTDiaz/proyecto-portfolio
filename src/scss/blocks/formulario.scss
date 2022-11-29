@@ -2,6 +2,7 @@
 @use '../mixins/flexbox.scss' as*;
 
 .form{
+    margin-bottom: 350px;
     &__field{
         @include flexbox(flex,column,nowrap,center,baseline);
         margin-bottom: 0.5rem;

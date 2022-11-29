@@ -6,8 +6,7 @@
     left: 0;
     &--projects{
         top: 0;
-        left: 0;
-        transform: translateX(calc(100vw - 100%));
+        transform: translateX(calc(100vw - 108%));
         &-right{
             display: none;
         }
