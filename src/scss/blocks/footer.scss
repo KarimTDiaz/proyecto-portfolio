@@ -3,20 +3,16 @@
 @use '../mixins/hover.scss' as*;
 @use '../functions/image.scss';
 
-.footer{
-    &-container{
-        position: relative;
-    }
+.footer {
     position: absolute;
-    height: 550px;
-    width: 100%;
     bottom: 0;
     z-index: var(--z-index-1000);
+    height: 550px;
+    width: 100%;
     padding-top: 5rem;
     background-color: var(--primary-color);
     background-image: image.mobile('bg-mobile-footer.svg');
     background-size: cover;
     background-repeat: no-repeat;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-
 }
