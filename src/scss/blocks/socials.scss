@@ -2,21 +2,42 @@
 @use '../mixins/responsive.scss' as*;
 @use '../mixins/hover.scss' as*;
 
-.socials{
-    @include flexbox(flex,row,nowrap,center,center);
-    gap: 20px;
-    margin-left: 7rem;
-    &__icon{
+.socials {
+    position: relative;
+
+    &__icon {
+        position: absolute;
+        left: 13rem;
         padding-top: 0.5rem;
         font-size: var(--title-m);
         color: var(--white-text);
-        @include hover{
-            &:hover{
+
+        &--github {
+            left: 15.5rem;
+        }
+
+        @include hover {
+            &:hover {
                 color: var(--secondary-color);
             }
         }
-        @include responsive(tablet){
+
+        @include responsive(tablet) {
             padding-top: 2.5rem;
+            left: 23rem;
+
+            &--github {
+                left: 25.5rem;
+            }
+        }
+
+        @include responsive(laptop) {
+            padding-top: 1.5rem;
+            left: 18rem;
+
+            &--github {
+                left: 20.5rem
+            }
         }
     }
 }

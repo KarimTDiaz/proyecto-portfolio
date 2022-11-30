@@ -34,325 +34,212 @@
   <title>Document</title>
 </head>
 
-  <body>
-    <header class="header">
-      <div class="header__top">
-        <img src="assets/images/logo.svg" alt="logo" class="logo" />
-        <nav>
-          <ul class="menu" id="menu">
-            <li class="menu__item">
-              <a href="#" class="menu__link">HOME</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">SOBRE MI</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">PROYECTOS</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">CONTACTO</a>
-            </li>
-          </ul>
-        </nav> 
-        <div id="menu-icon" class="menu-icon">
-          <div id="menu-icon-bar" class="menu-icon__bar"></div>
-        </div>
-      </div>
-      <div class="main-title">
-        <span class="main-title__item">Hi,</span>
-        <span class="main-title__item">im</span>
-        <span class="main-title__item main-title__item--color">Karim</span>
-        <span class="main-title__item">front</span>
-        <span class="main-title__item">-</span>
-        <span class="main-title__item">end</span>
-        <span class="main-title__item main-title__item--color">web</span>
-        <span class="main-title__item">developer</span>
-      </div>
-      <a href="#" class="button button--animation">CONOCE MI TRABAJO</a>
-    </header>
-    <main class="main">
-      <article class="about">
-        <img
-          src="assets/images/image-crop2.svg"
-          alt="Imagen de Karim"
-          class="image image--profile"
-        />
-        <div class="about__data">
-          <div>
-            <h2 class="title">SOBRE MI</h2>
-            <h3 class="title--writing" id="title">COLABORATIVO</h3>
-            <p class="text">
-              Hola, soy Karim, apasionado por el mundo del desarrollo web y la
-              belleza detrás de la construcción de sitios web útiles como el que
-              encontrarás en este portfolio, me encuentro en la búsqueda de un
-              puesto de desarrollador junior para finalmente comenzar mi carrera
-              y aprender entre profesionales
-            </p>
-          </div>
-          <picture>
-            <source
-              media="(min-width:1024px)"
-              srcset="assets/images/desktop/deco-desktop-about.svg"
-            />
-            <source
-              media="(min-width:360px)"
-              srcset="assets/images/mobile/deco-mobile-about.svg"
-            />
-            <img
-              src="assets/images/mobile/deco-mobile-about.svg"
-              alt="decoracion"
-              class="decoration"
-            />
-          </picture>
-        </div>
-      </article>
-      <article class="skills">
-        <img
-          src="assets/images/circle-skills-def.svg"
-          alt=""
-          class="vector vector-skill"
-        />
-        <p class="text skills__data">
-          Me desenvuelvo bien con los lenguajes que he aprendido a utilizar en
-          el mastter de desarrollo web front-end impartido en la escuela Trazos,
-          html ,css y JavaScript, optimizando su uso con preprocesadores como
-          Sass.
-        </p>
-      </article>
-      <article class="projects">
-        <picture>
-          <source
-            media="(min-width:1024px)"
-            srcset="assets/images/desktop/deco-desktop-projects-left.svg"
-          />
-          <source
-            media="(min-width:640px)"
-            srcset="assets/images/tablet/deco-tablet-projects.svg"
-          />
-          <source
-            media="(min-width:360px)"
-            srcset="assets/images/mobile/deco-mobile-projects.svg"
-          />
-          <img
-            src="assets/images/mobile/deco-mobile-projects.svg"
-            alt="Decoracion"
-            class="decoration decoration--projects"
-          />
-        </picture>
-        <h2 class="title">PROYECTOS</h2>
-        <p class="text">Proyectos realizados durante el primer módulo.</p>
-        <div class="gallery">
-          <div class="gallery__item">
-            <picture>
-              <source
-                media="(min-width:1024px)"
-                srcset="assets/images/desktop/gallery-desktop-1.svg"
-              />
-              <source
-                media="(min-width:640px)"
-                srcset="assets/images/tablet/gallery-tablet-1.svg"
-              />
-              <source
-                media="(min-width:360px)"
-                srcset="assets/images/mobile/gallery-mobile-1.svg"
-              />
-              <img
-                src="assets/images/mobile/gallery-mobile-1.svg"
-                alt="Imagen proyecto"
-                class="image"
-              />
-            </picture>
-          </div>
-          <div class="gallery__item">
-            <picture>
-              <source
-                media="(min-width:1024px)"
-                srcset="assets/images/desktop/gallery-desktop-2.svg"
-              />
-              <source
-                media="(min-width:640px)"
-                srcset="assets/images/tablet/gallery-tablet-2.svg"
-              />
-              <source
-                media="(min-width:360px)"
-                srcset="assets/images/mobile/gallery-mobile-2.svg"
-              />
-              <img
-                src="assets/images/mobile/gallery-mobile-2.svg"
-                alt="Imagen proyecto"
-                class="image"
-              />
-            </picture>
-          </div>
-          <div class="gallery__item">
-            <picture>
-              <source
-                media="(min-width:1024px)"
-                srcset="assets/images/desktop/gallery-desktop-3.svg"
-              />
-              <source
-                media="(min-width:640px)"
-                srcset="assets/images/tablet/gallery-tablet-3.svg"
-              />
-              <source
-                media="(min-width:360px)"
-                srcset="assets/images/mobile/gallery-mobile-3.svg"
-              />
-              <img
-                src="assets/images/mobile/gallery-mobile-3.svg"
-                alt="Imagen proyecto"
-                class="image"
-              />
-            </picture>
-          </div>
-          <div class="gallery__item">
-            <picture>
-              <source
-                media="(min-width:1024px)"
-                srcset="assets/images/desktop/gallery-desktop-4.svg"
-              />
-              <source
-                media="(min-width:640px)"
-                srcset="assets/images/tablet/gallery-tablet-4.svg"
-              />
-              <source
-                media="(min-width:360px)"
-                srcset="assets/images/mobile/gallery-mobile-4.svg"
-              />
-              <img
-                src="assets/images/mobile/gallery-mobile-4.svg"
-                alt="Imagen proyecto"
-                class="image"
-              />
-            </picture>
-          </div>
-          <div class="gallery__item">
-            <picture>
-              <source
-                media="(min-width:1024px)"
-                srcset="assets/images/desktop/gallery-desktop-5.svg"
-              />
-              <source
-                media="(min-width:640px)"
-                srcset="assets/images/tablet/gallery-tablet-5.svg"
-              />
-              <source
-                media="(min-width:360px)"
-                srcset="assets/images/mobile/gallery-mobile-5.svg"
-              />
-              <img
-                src="assets/images/mobile/gallery-mobile-5.svg"
-                alt="Imagen proyecto"
-                class="image"
-              />
-            </picture>
-          </div>
-          <div class="gallery__item">
-            <picture>
-              <source
-                media="(min-width:1024px)"
-                srcset="assets/images/desktop/gallery-desktop-6.svg"
-              />
-              <source
-                media="(min-width:640px)"
-                srcset="assets/images/tablet/gallery-tablet-6.svg"
-              />
-              <source
-                media="(min-width:360px)"
-                srcset="assets/images/mobile/gallery-mobile-6.svg"
-              />
-              <img
-                src="assets/images/mobile/gallery-mobile-6.svg"
-                alt="Imagen proyecto"
-                class="image"
-              />
-            </picture>
-          </div>
-        </div>
-         <img
-          src="assets/images/desktop/deco-desktop-projects-right.svg"
-          alt="decoracion"
-          class="decoration decoration--projects-right"
-        />
-      </article>
-       <article class="contact">
-        <div class="contact__data">
-          <h2 class="title title--contact">CONTACTA CONMIGO</h2>
-          <p class="text">Para mas información, escríbeme un correo</p>
-        </div> 
-       <div class="form-container">
-          <form id="form" class="form">
-            <div class="form__field">
-              <label for="name" class="text text--smaller">NOMBRE</label>
-              <input type="text" id="name" name="name" class="form__input" />
-            </div>
-            <div class="form__field">
-              <label for="email" class="text text--smaller">EMAIL</label>
-              <input type="text" id="email" name="number" class="form__input" />
-            </div>
-            <div class="form__field">
-              <label for="text-area" class="text text--smaller">MENSAJE</label>
-              <textarea
-                name="text-area"
-                id="text-area"
-                class="text-area"
-              ></textarea>
-            </div>
-            <div class="form__field">
-              <input type="submit" value="ENVIAR" class="button button--form" />
-            </div>
-          </form>
-        </div> 
-      </article>
-    </main>
-    <div class="footer-container">
-    <footer class="footer">
+<body>
+  <header class="header">
+    <div class="header__top">
+      <img src="assets/images/logo.svg" alt="logo" class="logo" />
       <nav>
-        <ul class="menu menu--footer">
-          <li class="menu__item menu__item--footer">
-            <a href="#" class="menu__link menu__link--footer">HOME</a>
+        <ul class="menu" id="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link">HOME</a>
           </li>
-          <li class="menu__item menu__item--footer">
-            <a href="#" class="menu__link menu__link--footer">SOBRE MI</a>
+          <li class="menu__item">
+            <a href="#" class="menu__link">SOBRE MI</a>
           </li>
-          <li class="menu__item menu__item--footer">
-            <a href="#" class="menu__link menu__link--footer">PROYECTOS</a>
+          <li class="menu__item">
+            <a href="#" class="menu__link">PROYECTOS</a>
           </li>
-          <li class="menu__item menu__item--footer">
-            <a href="#" class="menu__link menu__link--footer">CONTACTO</a>
+          <li class="menu__item">
+            <a href="#" class="menu__link">CONTACTO</a>
           </li>
         </ul>
       </nav>
-      <ul class="socials">
-        <li class="socials__item">
-          <i class="fa-brands fa-linkedin"></i>
+      <div id="menu-icon" class="menu-icon">
+        <div id="menu-icon-bar" class="menu-icon__bar"></div>
+      </div>
+    </div>
+    <div class="main-title">
+      <span class="main-title__item">Hi,</span>
+      <span class="main-title__item">im</span>
+      <span class="main-title__item main-title__item--color">Karim</span>
+      <span class="main-title__item">front</span>
+      <span class="main-title__item">-</span>
+      <span class="main-title__item">end</span>
+      <span class="main-title__item main-title__item--color">web</span>
+      <span class="main-title__item">developer</span>
+    </div>
+    <a href="#" class="button button--animation">CONOCE MI TRABAJO</a>
+  </header>
+  <main class="main">
+    <article class="about">
+      <img src="assets/images/image-crop2.svg" alt="Imagen de Karim" class="image image--profile" />
+      <div class="about__data">
+        <div>
+          <h2 class="title">SOBRE MI</h2>
+          <h3 class="title--writing" id="title">COLABORATIVO</h3>
+          <p class="text">
+            Hola, soy Karim, apasionado por el mundo del desarrollo web y la
+            belleza detrás de la construcción de sitios web útiles como el que
+            encontrarás en este portfolio, me encuentro en la búsqueda de un
+            puesto de desarrollador junior para finalmente comenzar mi carrera
+            y aprender entre profesionales
+          </p>
+        </div>
+        <picture>
+          <source media="(min-width:1024px)" srcset="assets/images/desktop/deco-desktop-about.svg" />
+          <source media="(min-width:360px)" srcset="assets/images/mobile/deco-mobile-about.svg" />
+          <img src="assets/images/mobile/deco-mobile-about.svg" alt="decoracion" class="decoration" />
+        </picture>
+      </div>
+    </article>
+    <article class="skills">
+      <img src="assets/images/circle-skills-def.svg" alt="" class="vector vector-skill" />
+      <p class="text skills__data">
+        Me desenvuelvo bien con los lenguajes que he aprendido a utilizar en
+        el mastter de desarrollo web front-end impartido en la escuela Trazos,
+        html ,css y JavaScript, optimizando su uso con preprocesadores como
+        Sass.
+      </p>
+    </article>
+    <article class="projects">
+      <picture>
+        <source media="(min-width:1024px)" srcset="assets/images/desktop/deco-desktop-projects-left.svg" />
+        <source media="(min-width:640px)" srcset="assets/images/tablet/deco-tablet-projects.svg" />
+        <source media="(min-width:360px)" srcset="assets/images/mobile/deco-mobile-projects.svg" />
+        <img src="assets/images/mobile/deco-mobile-projects.svg" alt="Decoracion"
+          class="decoration decoration--projects" />
+      </picture>
+      <h2 class="title">PROYECTOS</h2>
+      <p class="text">Proyectos realizados durante el primer módulo.</p>
+      <div id="gallery" class="gallery">
+        <div class="gallery__item">
+          <picture>
+            <source media="(min-width:1024px)" srcset="assets/images/desktop/gallery-desktop-1.svg" />
+            <source media="(min-width:640px)" srcset="assets/images/tablet/gallery-tablet-1.svg" />
+            <source media="(min-width:360px)" srcset="assets/images/mobile/gallery-mobile-1.svg" />
+            <img src="assets/images/mobile/gallery-mobile-1.svg" alt="Imagen proyecto" class="image" />
+          </picture>
+        </div>
+        <div class="gallery__item">
+          <picture>
+            <source media="(min-width:1024px)" srcset="assets/images/desktop/gallery-desktop-2.svg" />
+            <source media="(min-width:640px)" srcset="assets/images/tablet/gallery-tablet-2.svg" />
+            <source media="(min-width:360px)" srcset="assets/images/mobile/gallery-mobile-2.svg" />
+            <img src="assets/images/mobile/gallery-mobile-2.svg" alt="Imagen proyecto" class="image" />
+          </picture>
+        </div>
+        <div class="gallery__item">
+          <picture>
+            <source media="(min-width:1024px)" srcset="assets/images/desktop/gallery-desktop-3.svg" />
+            <source media="(min-width:640px)" srcset="assets/images/tablet/gallery-tablet-3.svg" />
+            <source media="(min-width:360px)" srcset="assets/images/mobile/gallery-mobile-3.svg" />
+            <img src="assets/images/mobile/gallery-mobile-3.svg" alt="Imagen proyecto" class="image" />
+          </picture>
+        </div>
+        <div class="gallery__item">
+          <picture>
+            <source media="(min-width:1024px)" srcset="assets/images/desktop/gallery-desktop-4.svg" />
+            <source media="(min-width:640px)" srcset="assets/images/tablet/gallery-tablet-4.svg" />
+            <source media="(min-width:360px)" srcset="assets/images/mobile/gallery-mobile-4.svg" />
+            <img src="assets/images/mobile/gallery-mobile-4.svg" alt="Imagen proyecto" class="image" />
+          </picture>
+        </div>
+        <div class="gallery__item">
+          <picture>
+            <source media="(min-width:1024px)" srcset="assets/images/desktop/gallery-desktop-5.svg" />
+            <source media="(min-width:640px)" srcset="assets/images/tablet/gallery-tablet-5.svg" />
+            <source media="(min-width:360px)" srcset="assets/images/mobile/gallery-mobile-5.svg" />
+            <img src="assets/images/mobile/gallery-mobile-5.svg" alt="Imagen proyecto" class="image" />
+          </picture>
+        </div>
+        <div class="gallery__item">
+          <picture>
+            <source media="(min-width:1024px)" srcset="assets/images/desktop/gallery-desktop-6.svg" />
+            <source media="(min-width:640px)" srcset="assets/images/tablet/gallery-tablet-6.svg" />
+            <source media="(min-width:360px)" srcset="assets/images/mobile/gallery-mobile-6.svg" />
+            <img src="assets/images/mobile/gallery-mobile-6.svg" alt="Imagen proyecto" class="image" />
+          </picture>
+        </div>
+      </div>
+      <img src="assets/images/desktop/deco-desktop-projects-right.svg" alt="decoracion"
+        class="decoration decoration--projects-right" />
+    </article>
+    <article class="contact">
+      <div class="contact__data">
+        <h2 class="title title--contact">CONTACTA CONMIGO</h2>
+        <p class="text">Para mas información, escríbeme un correo</p>
+      </div>
+      <div class="form-container">
+        <form id="form" class="form">
+          <div class="form__field">
+            <label for="name" class="text text--smaller">NOMBRE</label>
+            <input type="text" id="name" name="name" class="form__input" />
+          </div>
+          <div class="form__field">
+            <label for="email" class="text text--smaller">EMAIL</label>
+            <input type="text" id="email" name="number" class="form__input" />
+          </div>
+          <div class="form__field">
+            <label for="text-area" class="text text--smaller">MENSAJE</label>
+            <textarea name="text-area" id="text-area" class="text-area"></textarea>
+          </div>
+          <div class="form__field">
+            <input type="submit" value="ENVIAR" class="button button--form" />
+          </div>
+        </form>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <nav>
+      <ul class="menu menu--footer">
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">HOME</a>
         </li>
-        <li class="socials__item">
-          <i class="fa-brands fa-github"></i>
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">SOBRE MI</a>
+        </li>
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">PROYECTOS</a>
+        </li>
+        <li class="menu__item menu__item--footer">
+          <a href="#" class="menu__link menu__link--footer">CONTACTO</a>
         </li>
       </ul>
-      <picture>
-        <source
-          media="(min-width:1024px)"
-          srcset="assets/images/desktop/deco-desktop-footer.svg"
-        />
-        <source
-          media="(min-width:640px)"
-          srcset="assets/images/tablet/deco-tablet-footer.svg"
-        />
-        <source
-          media="(min-width:360px)"
-          srcset="assets/images/mobile/deco-mobile-footer.svg"
-        />
-        <img
-          src="assets/images/mobile/deco-mobile-footer.svg"
-          alt="Decoracion"
-          class="decoration decoration--footer"
-        />
-      </picture>
-     
-    </footer>
+    </nav>
+    <ul class="socials">
+      <li class="socials__item">
+        <a href="https://www.linkedin.com/in/karim-tilouni-diaz-575881258/" target="_blank"><i
+            class="fa-brands fa-linkedin socials__icon"></i></a>
+      </li>
+      <li class="socials__item">
+        <a href="https://github.com/KarimTDiaz" target="_blank"><i
+            class="fa-brands fa-github socials__icon socials__icon--github"></i></a>
+      </li>
+    </ul>
+    <picture>
+      <source media="(min-width:1024px)" srcset="assets/images/desktop/deco-desktop-footer.svg" />
+      <source media="(min-width:640px)" srcset="assets/images/tablet/deco-tablet-footer.svg" />
+      <source media="(min-width:360px)" srcset="assets/images/mobile/deco-mobile-footer.svg" />
+      <img src="assets/images/mobile/deco-mobile-footer.svg" alt="Decoracion" class="decoration decoration--footer" />
+    </picture>
+  </footer>
+  <div class="modal" id="modal">
+    <div class="modal__image-container">
+      <h2 id="modal-title" class="modal__text"></h2>
+      <img id="modal-image" class="modal__image" src="" alt="Imagen de proyecto">
+      <p id="modal-text"></p>
+
+      <img id='modal-cross' src="assets/images/close.png" alt="icono cruz" class="modal__icon">
+
+      <img src="assets/images/arrow-left.png" alt="flecha izquierda" class="modal__icon modal__icon-left"
+        id="modal-arrow-left">
+
+      <img src="assets/images/arrow-right.png" alt="flecha derecha" class="modal__icon modal__icon-right"
+        id="modal-arrow-right">
+    </div>
   </div>
-    <script src="js/scripts.js"></script>
-  </body>
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>

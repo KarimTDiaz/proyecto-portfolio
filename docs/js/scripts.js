@@ -3,24 +3,60 @@ const menuIcon = document.getElementById('menu-icon')
 const menuIconBar = document.getElementById('menu-icon-bar')
 const titleElement = document.getElementById('title')
 const gallery = document.getElementById('gallery')
-const modalImage = document.getElementById('modal-image')
-const modal = document.getElementById('modal')
-const crossModal = document.getElementById('modal-cross')
+const galleryItems = Array.from(gallery.children)
 const arrowRightElement = document.getElementById('modal-arrow-right')
 const arrowleftElement = document.getElementById('modal-arrow-left')
 
-menuIcon.addEventListener('click', () => {
-    menuIconBar.classList.toggle('menu-icon__bar--show');
-})
-
-menuIcon.addEventListener('click', () => {
-    menu.classList.toggle('menu--show')
-})
-
+const modal = document.getElementById('modal')
+const modalTitle = document.getElementById('modal-title')
+const modalText = document.getElementById('modal-text')
+const modalImage = document.getElementById('modal-image')
+const crossModal = document.getElementById('modal-cross')
 
 const titles = ['Colaborativo', 'Trabajo en equipo', 'Organización', 'Apasionado'];
+
+const slideItems = [
+    {
+        title: 'BLOGR',
+        srcProyecto: 'assets/images/previews/blogr.png',
+        text: 'Landing page de Blogr con menu responsive'
+
+    },
+    {
+        title: 'CLIPBOARD',
+        srcProyecto: 'assets/images/previews/clipboard.png',
+        text: 'Landing page de Clipboard'
+
+    },
+    {
+        title: 'HUDDLE',
+        srcProyecto: 'assets/images/previews/huddle.png',
+        text: 'Landing page de Huddle con secciones curvas'
+
+    },
+    {
+        title: 'INSURE',
+        srcProyecto: 'assets/images/previews/Insure.png',
+        text: 'Landing page de insure'
+
+    },
+    {
+        title: 'LOOPSTUDIOS',
+        srcProyecto: 'assets/images/previews/loopstudios.png',
+        text: 'Landing page de Loopstudios'
+
+    },
+    {
+        title: 'SUNNYSIDE',
+        srcProyecto: 'assets/images/previews/Sunnyside-preview.png',
+        text: 'Landing page de Sunnyside'
+
+    },
+]
+
 let letterCount = 0;
 let titlesIndex = 0;
+let contador = 0;
 
 const changeTitle = () => {
     if (titlesIndex >= titles.length - 1) {
@@ -52,56 +88,71 @@ const typewritterEffect = () => {
     }, 100);
 };
 
-typewritterEffect();
-
-const allImagesSrc = Array.from(document.querySelectorAll('.image--modal'))
-
-let contador = 0;
-
-gallery.addEventListener('click', (event) => {
-    console.log(event.target.src)
-    modalImage.src = (event.target.src)
+const fillModal = (target) => {
+    contador = galleryItems.indexOf(target.parentElement.parentElement)
+    modalTitle.textContent = slideItems[contador].title;
+    modalText.textContent = slideItems[contador].text;
+    modalImage.src = slideItems[contador].srcProyecto;
     modal.classList.add('modal--show')
-    contador = allImagesSrc.indexOf(event.target)
-
-})
-
-crossModal.addEventListener('click', () => {
-    modal.classList.remove('modal--show')
-})
-
-const cambiarSrcRight = () => {
-    if (contador >= allImagesSrc.length - 1) {
+}
+const changeModalRight = () => {
+    if (contador >= slideItems.length - 1) {
         contador = 0;
     } else {
         contador = contador + 1;
     }
 
-
+    modalTitle.classList.add('modal__image--fade-out');
+    modalText.classList.add('modal__image--fade-out');
     modalImage.classList.add('modal__image--fade-out');
 }
 
-const cambiarSrcLeft = () => {
+const changeModalLeft = () => {
     if (contador <= 0) {
-        contador = allImagesSrc.length - 1
+        contador = slideItems.length - 1
     } else {
         contador = contador - 1
     }
 
+    modalTitle.classList.add('modal__image--fade-out');
+    modalText.classList.add('modal__image--fade-out');
     modalImage.classList.add('modal__image--fade-out');
 
 }
-
 modalImage.addEventListener('transitionend', () => {
+    modalTitle.classList.remove('modal__image--fade-out')
+    modalText.classList.remove('modal__image--fade-out')
     modalImage.classList.remove('modal__image--fade-out')
-    modalImage.src = allImagesSrc[contador].src
+    modalTitle.textContent = slideItems[contador].title
+    modalText.textContent = slideItems[contador].text
+    modalImage.src = slideItems[contador].srcProyecto
+    modalTitle.classList.add('modal__image--fade-in')
+    modalText.classList.add('modal__image--fade-in')
     modalImage.classList.add('modal__image--fade-in')
 })
-//transitionend
 
-modalImage.src = allImagesSrc[contador].src
+typewritterEffect();
 
-arrowRightElement.addEventListener('click', cambiarSrcRight)
-arrowleftElement.addEventListener('click', cambiarSrcLeft)
+gallery.addEventListener('click', (ev) => fillModal(ev.target))
+
+crossModal.addEventListener('click', () => {
+    modal.classList.remove('modal--show')
+})
+
+menuIcon.addEventListener('click', () => {
+    menuIconBar.classList.toggle('menu-icon__bar--show');
+})
+
+menuIcon.addEventListener('click', () => {
+    menu.classList.toggle('menu--show')
+})
+
+arrowRightElement.addEventListener('click', changeModalRight)
+arrowleftElement.addEventListener('click', changeModalLeft)
+
+
+
+
+
 
 

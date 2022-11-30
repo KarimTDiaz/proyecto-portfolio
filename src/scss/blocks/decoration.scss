@@ -4,29 +4,36 @@
     position: absolute;
     bottom: 0;
     left: 0;
+
     @include responsive(laptop) {
         left: auto;
         right: 0px;
         bottom: -225px;
     }
-    &--projects{
+
+    &--projects {
         top: 0;
         transform: translateX(calc(100vw - 108%));
-        &-right{
+
+        &-right {
             display: none;
         }
-        @include responsive(tablet){
+
+        @include responsive(tablet) {
             transform: translateX(0);
         }
-        @include responsive(laptop){
-            transform: translate(calc(-100vw + 102%),calc(1200px - 105%));
-            &-right{
+
+        @include responsive(laptop) {
+            transform: translate(calc(-100vw + 102%), calc(1200px - 105%));
+
+            &-right {
                 display: block;
                 top: 80px;
             }
         }
     }
-    &--footer{
+
+    &--footer {
         right: auto;
         left: 0;
         bottom: 0;

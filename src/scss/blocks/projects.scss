@@ -3,8 +3,8 @@
 @use '../functions/image.scss';
 @use '../mixins/pseudo.scss' as*;
 
-.projects{
-    position:relative;
+.projects {
+    position: relative;
     top: -100px;
     padding: 5rem 3rem;
     background-color: var(--secondary-color);
@@ -12,14 +12,15 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    @include responsive(tablet){
+    @include responsive(tablet) {
         top: -150px;
-        padding-left:6rem ;
+        padding-left: 6rem;
         background-image: image.tablet('bg-tablet-projects.svg');
     }
-    @include responsive (laptop){
-       top: -80px;
-       height: 1200px;
-       z-index: var(--z-index-negative);
+
+    @include responsive (laptop) {
+        top: -80px;
+        height: 1200px;
+
     }
 }

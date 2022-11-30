@@ -3,10 +3,7 @@
 @use '../mixins/hover.scss' as*;
 @use '../functions/image.scss';
 
-.footer{
-    &-container{
-        position: relative;
-    }
+.footer {
     position: absolute;
     height: 550px;
     width: 100%;
@@ -18,5 +15,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
+    @include responsive(tablet) {
+        height: 600px;
+        background-image: image.tablet('bg-tablet-footer.svg');
+    }
+
+    @include responsive(laptop) {
+        height: 300px;
+        background-image: image.desktop('bg-desktop-footer.svg');
+    }
 
 }
