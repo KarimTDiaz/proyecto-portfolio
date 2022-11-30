@@ -380,7 +380,9 @@ a {
 
 :root {
   --primary-color: hsl(16, 100%, 50%);
-  --secondary-color: hsl(311, 23%, 14%);
+  /* --secondary-color: hsl(311, 23%, 14%);  */
+  --secondary-color:hsl(0, 0%, 0%);
+  /* --secondary-color: black; */
   --white-text: hsl(0, 0%, 100%);
   --grey-text: hsl(0, 0%, 85%);
   --z-index-negative: -1;
@@ -1057,21 +1059,34 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: baseline;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  padding-top: 2rem;
+  font-family: var(--secondary-font);
   background-color: rgba(0, 0, 0, 0.8);
+  color: var(--white-text);
   transform: scale(0);
   transition-duration: 1s;
-  color: var(--white-text);
-  font-family: var(--secondary-font);
 }
 .modal--show {
   transform: scale(1);
   transition-duration: 1s;
 }
+.modal__title {
+  margin-left: 5%;
+  font-size: var(--title-l);
+}
+.modal__text {
+  margin-left: 5%;
+  font-size: var(--text-l);
+}
 .modal__image {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   transition: opacity 0.6s;
 }
 .modal__image--fade-in {
@@ -1087,14 +1102,14 @@ body {
   width: 3%;
   min-width: 35px;
   position: absolute;
-  top: 2%;
-  right: 6%;
+  top: 4%;
+  right: 10%;
 }
 .modal__icon-left {
   top: 50%;
-  left: 4%;
+  left: 2%;
 }
 .modal__icon-right {
   top: 50%;
-  right: 4%;
+  right: 2%;
 }

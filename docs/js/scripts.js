@@ -18,37 +18,37 @@ const titles = ['Colaborativo', 'Trabajo en equipo', 'Organización', 'Apasionad
 const slideItems = [
     {
         title: 'BLOGR',
-        srcProyecto: 'assets/images/previews/blogr.png',
+        srcProyecto: 'assets/images/previews/Tall-Blogr.png',
         text: 'Landing page de Blogr con menu responsive'
 
     },
     {
         title: 'CLIPBOARD',
-        srcProyecto: 'assets/images/previews/clipboard.png',
+        srcProyecto: 'assets/images/previews/Tall-Clipboard.png',
         text: 'Landing page de Clipboard'
 
     },
     {
         title: 'HUDDLE',
-        srcProyecto: 'assets/images/previews/huddle.png',
+        srcProyecto: 'assets/images/previews/Tall-Huddle.png',
         text: 'Landing page de Huddle con secciones curvas'
 
     },
     {
         title: 'INSURE',
-        srcProyecto: 'assets/images/previews/Insure.png',
+        srcProyecto: 'assets/images/previews/Tall-Insure.png',
         text: 'Landing page de insure'
 
     },
     {
         title: 'LOOPSTUDIOS',
-        srcProyecto: 'assets/images/previews/loopstudios.png',
+        srcProyecto: 'assets/images/previews/Tall-Loopstudios.png',
         text: 'Landing page de Loopstudios'
 
     },
     {
         title: 'SUNNYSIDE',
-        srcProyecto: 'assets/images/previews/Sunnyside-preview.png',
+        srcProyecto: 'assets/images/previews/Tall-Sunnyside.png',
         text: 'Landing page de Sunnyside'
 
     },
