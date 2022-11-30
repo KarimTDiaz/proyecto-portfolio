@@ -4,6 +4,11 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    @include responsive(laptop) {
+        left: auto;
+        right: 0px;
+        bottom: -225px;
+    }
     &--projects{
         top: 0;
         transform: translateX(calc(100vw - 108%));
@@ -21,10 +26,9 @@
             }
         }
     }
-
-    @include responsive(laptop) {
-        left: auto;
-        right: 0px;
-        bottom: -225px;
+    &--footer{
+        right: auto;
+        left: 0;
+        bottom: 0;
     }
 }

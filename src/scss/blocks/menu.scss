@@ -20,6 +20,49 @@
   transform-origin: right;
   transition: transform 0.4s;
   z-index: 1;
+  &__item {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
+  &__link {
+    @include flexbox(flex,column,nowrap,center,center);
+    text-align: center;
+    color: var(--white-text);
+    font-family: var(--primary-font);
+    font-size: var(--menu-item);
+    @include hover{
+      &:hover{
+        color: var(--secondary-color);
+      }
+    }
+
+    @include responsive(laptop) {
+      font-size: var(--menu-item-desktop);
+      &::after{
+        @include pseudo(110% ,1%){
+          top: 20px;
+          left: -5%;
+          background-color: var(--white-text);
+          transform: scale(0);
+          transition: transform 0.5s ease;
+        }
+      }
+      @include hover {
+        &:hover::after {
+            transform: scale(1);
+        }
+    }
+    }
+    &--footer{
+      font-size: var(--text-l);
+    }
+    
+  }
+
+  &--show {
+    transform: translateX(0);
+  }
   &--footer{
     align-items: center;
     position: static;
@@ -31,28 +74,6 @@
   }  
 
 
-  &__item {
-    margin-bottom: 4rem;
-  }
-
-  &__link {
-    color: var(--white-text);
-    font-family: var(--primary-font);
-    font-size: var(--menu-item);
-
-    @include responsive(laptop) {
-      font-size: var(--menu-item-desktop);
-    }
-    &--footer{
-      font-size: var(--text-l);
-    }
-  }
-
-  &--show {
-    transform: translateX(0);
-  }
-
-
   @include responsive(laptop) {
     @include flexbox(flex, row, nowrap, space-between, center);
     position: static;
@@ -60,10 +81,18 @@
     height: 150px;
     padding: 0;
     background-image: none;
-    transform: translateX(100);
+    transform: translateX(0);
 
     &__item {
       margin-bottom: 0;
+    }
+
+    &--footer{
+      align-items: baseline;
+      width: 60vw;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 5rem;
     }
   }
 

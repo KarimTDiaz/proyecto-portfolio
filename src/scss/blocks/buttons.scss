@@ -37,9 +37,9 @@
             @include pseudo(0%, 100%) {
                 top: 50%;
                 left: 50%;
+                z-index: -1;
                 background-color: var(--white-text);
                 transform: translate(-50%, -50%);
-                z-index: -1;
                 transition: all 0.6s ease;
             }
         }

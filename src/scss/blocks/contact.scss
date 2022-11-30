@@ -8,14 +8,14 @@
     background-color: var(--secondary-color);
     @include responsive(tablet){
         top: -150px;
-        padding: 5rem 5rem 5rem;
+        padding: 5rem;
     }
     @include responsive(laptop){
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 10rem;
+        justify-items: center;
         top: -80px;
-        padding: 5rem 20rem 5rem;
+        padding: 5rem 10rem;
         &__data{
         width: 400px;
         }

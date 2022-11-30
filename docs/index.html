@@ -22,22 +22,22 @@
   </head>
 
   <body>
-    <header class="header">
+    <header id="home" class="header">
       <div class="header__top">
         <img src="assets/images/logo.svg" alt="logo" class="logo" />
         <nav>
           <ul class="menu" id="menu">
             <li class="menu__item">
-              <a href="#" class="menu__link">HOME</a>
+              <a href="#home" class="menu__link">HOME</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">SOBRE MI</a>
+              <a href="#about" class="menu__link">SOBRE MI</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">PROYECTOS</a>
+              <a href="#projects" class="menu__link">PROYECTOS</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">CONTACTO</a>
+              <a href="#contact" class="menu__link">CONTACTO</a>
             </li>
           </ul>
         </nav> 
@@ -58,7 +58,7 @@
       <a href="#" class="button button--animation">CONOCE MI TRABAJO</a>
     </header>
     <main class="main">
-      <article class="about">
+      <article id="about" class="about">
         <img
           src="assets/images/image-crop2.svg"
           alt="Imagen de Karim"
@@ -106,7 +106,7 @@
           Sass.
         </p>
       </article>
-      <article class="projects">
+      <article id="projects" class="projects">
         <picture>
           <source
             media="(min-width:1024px)"
@@ -128,7 +128,7 @@
         </picture>
         <h2 class="title">PROYECTOS</h2>
         <p class="text">Proyectos realizados durante el primer módulo.</p>
-        <div class="gallery">
+        <div id="gallery" class="gallery">
           <div class="gallery__item">
             <picture>
               <source
@@ -146,7 +146,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-1.svg"
                 alt="Imagen proyecto"
-                class="image"
+                class="image image--modal"
               />
             </picture>
           </div>
@@ -167,7 +167,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-2.svg"
                 alt="Imagen proyecto"
-                class="image"
+                class="image image--modal"
               />
             </picture>
           </div>
@@ -188,7 +188,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-3.svg"
                 alt="Imagen proyecto"
-                class="image"
+                class="image image--modal"
               />
             </picture>
           </div>
@@ -209,7 +209,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-4.svg"
                 alt="Imagen proyecto"
-                class="image"
+                class="image image--modal"
               />
             </picture>
           </div>
@@ -230,7 +230,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-5.svg"
                 alt="Imagen proyecto"
-                class="image"
+                class="image image--modal"
               />
             </picture>
           </div>
@@ -251,7 +251,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-6.svg"
                 alt="Imagen proyecto"
-                class="image"
+                class="image image--modal"
               />
             </picture>
           </div>
@@ -262,7 +262,7 @@
           class="decoration decoration--projects-right"
         />
       </article>
-       <article class="contact">
+       <article id="contact" class="contact">
         <div class="contact__data">
           <h2 class="title title--contact">CONTACTA CONMIGO</h2>
           <p class="text">Para mas información, escríbeme un correo</p>
@@ -292,7 +292,6 @@
         </div> 
       </article>
     </main>
-    <div class="footer-container">
     <footer class="footer">
       <nav>
         <ul class="menu menu--footer">
@@ -312,10 +311,10 @@
       </nav>
       <ul class="socials">
         <li class="socials__item">
-          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/karim-tilouni-diaz-575881258/" target="_blank"><i class="fa-brands fa-linkedin socials__icon"></i></a>
         </li>
         <li class="socials__item">
-          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/KarimTDiaz" target="_blank"><i class="fa-brands fa-github socials__icon"></i></a>
         </li>
       </ul>
       <picture>
@@ -337,9 +336,17 @@
           class="decoration decoration--footer"
         />
       </picture>
-     
     </footer>
-  </div>
+    <div id="modal" class="modal">
+      <div class="modal__image-container">
+          <img id="modal-image" class="modal__image" src="" alt="">
+
+          <img id='modal-cross' src="assets/images/close.png" alt="" class="modal__icon">
+
+          <img src="assets/images/arrow-left.png" alt="" class="modal__icon modal__icon-left" id="modal-arrow-left">
+
+          <img src="assets/images/arrow-right.png" alt="" class="modal__icon modal__icon-right" id="modal-arrow-right">
+      </div>
     <script src="js/scripts.js"></script>
   </body>
 </html>

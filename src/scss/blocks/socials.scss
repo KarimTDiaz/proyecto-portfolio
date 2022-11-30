@@ -1,0 +1,22 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+
+.socials{
+    @include flexbox(flex,row,nowrap,center,center);
+    gap: 20px;
+    margin-left: 7rem;
+    &__icon{
+        padding-top: 0.5rem;
+        font-size: var(--title-m);
+        color: var(--white-text);
+        @include hover{
+            &:hover{
+                color: var(--secondary-color);
+            }
+        }
+        @include responsive(tablet){
+            padding-top: 2.5rem;
+        }
+    }
+}

@@ -1,6 +1,14 @@
 @use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
 
 .image {
+    transform: scale(1);
+    transition:transform 0.5s;
+    @include hover{
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
     &--profile{
         clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 89%);
         filter: grayscale(1);
