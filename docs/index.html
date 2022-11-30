@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://kit.fontawesome.com/66848b9741.js" crossorigin="anonymous"></script>
 
-    <!-- CAMBIAR POR styles.min.css al finalizar el proyecto -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/66848b9741.js" crossorigin="anonymous"></script>
+
+  <!-- CAMBIAR POR styles.min.css al finalizar el proyecto -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Document</title>
+</head>
 
   <body>
-    <header id="home" class="header">
+    <header class="header">
       <div class="header__top">
         <img src="assets/images/logo.svg" alt="logo" class="logo" />
         <nav>
           <ul class="menu" id="menu">
             <li class="menu__item">
-              <a href="#home" class="menu__link">HOME</a>
+              <a href="#" class="menu__link">HOME</a>
             </li>
             <li class="menu__item">
-              <a href="#about" class="menu__link">SOBRE MI</a>
+              <a href="#" class="menu__link">SOBRE MI</a>
             </li>
             <li class="menu__item">
-              <a href="#projects" class="menu__link">PROYECTOS</a>
+              <a href="#" class="menu__link">PROYECTOS</a>
             </li>
             <li class="menu__item">
-              <a href="#contact" class="menu__link">CONTACTO</a>
+              <a href="#" class="menu__link">CONTACTO</a>
             </li>
           </ul>
         </nav> 
@@ -58,7 +71,7 @@
       <a href="#" class="button button--animation">CONOCE MI TRABAJO</a>
     </header>
     <main class="main">
-      <article id="about" class="about">
+      <article class="about">
         <img
           src="assets/images/image-crop2.svg"
           alt="Imagen de Karim"
@@ -106,7 +119,7 @@
           Sass.
         </p>
       </article>
-      <article id="projects" class="projects">
+      <article class="projects">
         <picture>
           <source
             media="(min-width:1024px)"
@@ -128,7 +141,7 @@
         </picture>
         <h2 class="title">PROYECTOS</h2>
         <p class="text">Proyectos realizados durante el primer módulo.</p>
-        <div id="gallery" class="gallery">
+        <div class="gallery">
           <div class="gallery__item">
             <picture>
               <source
@@ -146,7 +159,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-1.svg"
                 alt="Imagen proyecto"
-                class="image image--modal"
+                class="image"
               />
             </picture>
           </div>
@@ -167,7 +180,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-2.svg"
                 alt="Imagen proyecto"
-                class="image image--modal"
+                class="image"
               />
             </picture>
           </div>
@@ -188,7 +201,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-3.svg"
                 alt="Imagen proyecto"
-                class="image image--modal"
+                class="image"
               />
             </picture>
           </div>
@@ -209,7 +222,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-4.svg"
                 alt="Imagen proyecto"
-                class="image image--modal"
+                class="image"
               />
             </picture>
           </div>
@@ -230,7 +243,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-5.svg"
                 alt="Imagen proyecto"
-                class="image image--modal"
+                class="image"
               />
             </picture>
           </div>
@@ -251,7 +264,7 @@
               <img
                 src="assets/images/mobile/gallery-mobile-6.svg"
                 alt="Imagen proyecto"
-                class="image image--modal"
+                class="image"
               />
             </picture>
           </div>
@@ -262,7 +275,7 @@
           class="decoration decoration--projects-right"
         />
       </article>
-       <article id="contact" class="contact">
+       <article class="contact">
         <div class="contact__data">
           <h2 class="title title--contact">CONTACTA CONMIGO</h2>
           <p class="text">Para mas información, escríbeme un correo</p>
@@ -292,6 +305,7 @@
         </div> 
       </article>
     </main>
+    <div class="footer-container">
     <footer class="footer">
       <nav>
         <ul class="menu menu--footer">
@@ -311,10 +325,10 @@
       </nav>
       <ul class="socials">
         <li class="socials__item">
-          <a href="https://www.linkedin.com/in/karim-tilouni-diaz-575881258/" target="_blank"><i class="fa-brands fa-linkedin socials__icon"></i></a>
+          <i class="fa-brands fa-linkedin"></i>
         </li>
         <li class="socials__item">
-          <a href="https://github.com/KarimTDiaz" target="_blank"><i class="fa-brands fa-github socials__icon"></i></a>
+          <i class="fa-brands fa-github"></i>
         </li>
       </ul>
       <picture>
@@ -336,17 +350,9 @@
           class="decoration decoration--footer"
         />
       </picture>
+     
     </footer>
-    <div id="modal" class="modal">
-      <div class="modal__image-container">
-          <img id="modal-image" class="modal__image" src="" alt="">
-
-          <img id='modal-cross' src="assets/images/close.png" alt="" class="modal__icon">
-
-          <img src="assets/images/arrow-left.png" alt="" class="modal__icon modal__icon-left" id="modal-arrow-left">
-
-          <img src="assets/images/arrow-right.png" alt="" class="modal__icon modal__icon-right" id="modal-arrow-right">
-      </div>
+  </div>
     <script src="js/scripts.js"></script>
   </body>
 </html>
