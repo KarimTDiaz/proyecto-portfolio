@@ -49,6 +49,12 @@
 
         &-container {
             width: 75%;
+            
+        }
+        @include responsive(laptop){
+           &-container{
+            width: 40%;
+           } 
         }
     }
 
@@ -57,7 +63,7 @@
         min-width: 35px;
         position: absolute;
         top: 4%;
-        right: 10%;
+        right: 5%;
 
         &-left {
             top: 50%;

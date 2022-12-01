@@ -23,6 +23,7 @@
     @include responsive(laptop) {
         @include flexbox(flex, row, nowrap, space-evenly, center);
         gap: 10rem;
+        z-index: var(--z-index-1000);
         top: 0;
         padding: 5rem 15rem;
         background-image: image.desktop('bg-desktop-skills-2.svg');

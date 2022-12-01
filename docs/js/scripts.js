@@ -6,15 +6,15 @@ const gallery = document.getElementById('gallery')
 const galleryItems = Array.from(gallery.children)
 const arrowRightElement = document.getElementById('modal-arrow-right')
 const arrowleftElement = document.getElementById('modal-arrow-left')
-
 const modal = document.getElementById('modal')
 const modalTitle = document.getElementById('modal-title')
 const modalText = document.getElementById('modal-text')
 const modalImage = document.getElementById('modal-image')
 const crossModal = document.getElementById('modal-cross')
+const changeColor = document.getElementById('change-color')
 
 const titles = ['Colaborativo', 'Trabajo en equipo', 'Organización', 'Apasionado'];
-
+const rootStyles = document.documentElement.style;
 const slideItems = [
     {
         title: 'BLOGR',
@@ -149,6 +149,13 @@ menuIcon.addEventListener('click', () => {
 
 arrowRightElement.addEventListener('click', changeModalRight)
 arrowleftElement.addEventListener('click', changeModalLeft)
+
+changeColor.addEventListener('click', (event) => {
+    if (event.target.classList.contains('color')) {
+
+        rootStyles.setProperty('--primary-color', event.target.dataset.color)
+    }
+})
 
 
 
