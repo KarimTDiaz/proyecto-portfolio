@@ -12,6 +12,8 @@ const modalText = document.getElementById('modal-text')
 const modalImage = document.getElementById('modal-image')
 const crossModal = document.getElementById('modal-cross')
 const changeColor = document.getElementById('change-color')
+const body = document.body;
+const darkmode = document.getElementById('toggle') 
 
 const titles = ['Colaborativo', 'Trabajo en equipo', 'Organización', 'Apasionado'];
 const rootStyles = document.documentElement.style;
@@ -155,6 +157,10 @@ changeColor.addEventListener('click', (event) => {
 
         rootStyles.setProperty('--primary-color', event.target.dataset.color)
     }
+})
+
+darkmode.addEventListener('click', () => {
+    body.classList.toggle('dark')
 })
 
 

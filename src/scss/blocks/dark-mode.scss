@@ -1,0 +1,35 @@
+@use '../mixins/pseudo.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../functions/image.scss';
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-image: image.mobile('Button-dark-mode.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+.toggle-label::after {
+
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 10rem;
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+.toggle-input:checked+.toggle-label::after {
+    transform: translateX(91%);
+}

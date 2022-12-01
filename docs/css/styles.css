@@ -400,6 +400,12 @@ body {
   position: relative;
 }
 
+body.dark {
+  --secondary-color:hsl(0, 0%, 100%);
+  --white-text:hsl(0, 0%, 0%);
+  --grey-text:hsl(0, 0%, 0%);
+}
+
 .main {
   margin-top: 100vh;
 }
@@ -1154,4 +1160,35 @@ body {
 }
 .color--yellow {
   background-color: #ffd700;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background-image: url("../assets/images/mobile/Button-dark-mode.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+
+.toggle-label::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 10rem;
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+
+.toggle-input:checked + .toggle-label::after {
+  transform: translateX(91%);
 }

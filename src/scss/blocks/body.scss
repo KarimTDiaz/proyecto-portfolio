@@ -6,3 +6,9 @@ body {
     position: relative;
 
 }
+
+body.dark{
+    --secondary-color:hsl(0, 0%, 100%);
+    --white-text:hsl(0, 0%, 0%);
+    --grey-text:hsl(0, 0%, 0%);
+}
