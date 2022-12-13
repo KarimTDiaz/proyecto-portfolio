@@ -11,7 +11,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  padding: 15rem 2rem 0;
+  padding: 10rem 2rem 0;
   background-image: linear-gradient(
     var(--primary-color),
     var(--secondary-color)
@@ -19,7 +19,7 @@
   transform: translateX(100%);
   transform-origin: right;
   transition: transform 0.4s;
-  z-index: 1;
+  z-index: var(--z-index-10);
   &__item {
     position: relative;
     margin-bottom: 4rem;
@@ -30,7 +30,23 @@
     text-align: center;
     color: var(--white-text);
     font-family: var(--primary-font);
-    font-size: var(--menu-item);
+    font-size: var(--title-s);
+    animation-name: link-moving;
+    animation-duration: 2s;
+    @keyframes link-moving {
+      0%{
+        transform: translateX(10%);
+        opacity: 0.2;
+      }
+      50%{
+        transform: translateX(-10%);
+        opacity: 0.5;
+      }
+      100%{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
     @include hover{
       &:hover{
         color: var(--secondary-color);
@@ -56,6 +72,10 @@
     }
     &--footer{
       font-size: var(--text-l);
+      &::after{
+          top: 25px;
+          left: -5%;
+      }
     }
     
   }
@@ -98,6 +118,7 @@
 
   &-icon {
     width: 40px;
+    z-index: var(--z-index-1000);
 
     @include responsive(laptop) {
       display: none;

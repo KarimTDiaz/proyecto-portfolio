@@ -11,6 +11,10 @@
     font-size: var(--title-l);
     font-weight: 700;
     color: var(--white-text);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1s , opacity 1s;
+
 
     &__item {
         @include hover {
@@ -102,6 +106,9 @@
     font-family: var(--primary-font);
     font-size: var(--title-s);
     color: var(--primary-color);
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: transform 2s , opacity 2s;
 
     &--writing {
         font-family: var(--secondary-font);
@@ -112,4 +119,14 @@
         font-size: var(--title-m);
     }
 
+}
+
+.transition-main-title{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.transition-title{
+    transform: translateX(0);
+    opacity: 1;
 }

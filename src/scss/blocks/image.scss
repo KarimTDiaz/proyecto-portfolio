@@ -12,6 +12,9 @@
     &--profile{
         clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 89%);
         filter: grayscale(1);
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: transform 4s opacity 4s;
     
         @include responsive(laptop) {
             clip-path: none;
@@ -20,4 +23,9 @@
         }
 
     }
+}
+
+.transition-profile{
+    transform: translateX(0);
+    opacity: 1;
 }

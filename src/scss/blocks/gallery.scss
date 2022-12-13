@@ -9,10 +9,20 @@
     justify-content: center;
     justify-items: center;
     padding-top: 3rem;
+    &__item{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 2s , opacity 2s;
+    }
     @include responsive(tablet){
         grid-template-columns: repeat(2,1fr);
     }
     @include responsive(laptop){
         grid-template-columns: repeat(3,1fr);
     }
+}
+
+.transition-gallery{
+    transform: translateY(0);
+    opacity: 1;
 }

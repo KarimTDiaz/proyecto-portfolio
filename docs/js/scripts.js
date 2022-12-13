@@ -153,7 +153,7 @@ arrowRightElement.addEventListener('click', changeModalRight)
 arrowleftElement.addEventListener('click', changeModalLeft)
 
 changeColor.addEventListener('click', (event) => {
-    if (event.target.classList.contains('color')) {
+    if (event.target.classList.contains('change-color__item')) {
 
         rootStyles.setProperty('--primary-color', event.target.dataset.color)
     }
@@ -162,6 +162,56 @@ changeColor.addEventListener('click', (event) => {
 darkmode.addEventListener('click', () => {
     body.classList.toggle('dark')
 })
+
+const options = {
+    root: null,
+    rootMargin: '300px 300px',
+    threshold: 1,
+
+};
+
+const callback = (entries) => {
+    entries.forEach(entry => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            if (entry.target.classList.contains('gallery__item')) {
+                entry.target.classList.add('transition-gallery')
+            }
+            if (entry.target.classList.contains('main-title')) {
+                entry.target.classList.add('transition-main-title')
+            }
+            if (entry.target.classList.contains('image--profile')) {
+                entry.target.classList.add('transition-profile')
+            }
+            if (entry.target.classList.contains('title')) {
+                entry.target.classList.add('transition-title')
+            }
+            if (entry.target.classList.contains('text')) {
+                entry.target.classList.add('transition-text')
+            }
+        }
+    })
+}
+
+const observer = new IntersectionObserver(callback, options)
+
+observer.observe(document.querySelector('.main-title'));
+observer.observe(document.querySelector('.image--profile'));
+const galleryItemsObserve = document.querySelectorAll('.gallery__item');
+const titleObserve = document.querySelectorAll('.title');
+const textObserve = document.querySelectorAll('.text');
+
+
+for (const item of galleryItemsObserve) {
+    observer.observe(item)
+}
+
+for (const title of titleObserve) {
+    observer.observe(title)
+}
+for (const text of textObserve) {
+    observer.observe(text)
+}
 
 
 

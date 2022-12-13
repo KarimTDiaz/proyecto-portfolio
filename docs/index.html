@@ -31,26 +31,26 @@
 
   <!-- CAMBIAR POR styles.min.css al finalizar el proyecto -->
   <link rel="stylesheet" href="css/styles.css" />
-  <title>Document</title>
+  <title>Karim Web Developer</title>
 </head>
 
 <body>
-  <header class="header">
+  <header id="home" class="header">
     <div class="header__top">
       <img src="assets/images/logo.svg" alt="logo" class="logo" />
       <nav>
         <ul class="menu" id="menu">
           <li class="menu__item">
-            <a href="#" class="menu__link">HOME</a>
+            <a href="#home" class="menu__link">HOME</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">SOBRE MI</a>
+            <a href="#about" class="menu__link">SOBRE MI</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">PROYECTOS</a>
+            <a href="#projects" class="menu__link">PROYECTOS</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">CONTACTO</a>
+            <a href="#contact" class="menu__link">CONTACTO</a>
           </li>
         </ul>
       </nav>
@@ -71,10 +71,18 @@
     <input class="toggle-input" type="checkbox" id="toggle">
         <label for="toggle" class="toggle-label"></label>
 
-    <a href="#" class="button button--animation">CONOCE MI TRABAJO</a>
+    <a href="#projects" class="button button--animation">CONOCE MI TRABAJO</a>
+    <div class="change-color-container">
+    <div id="change-color" class="change-color">
+      <div class="change-color__item change-color__item--orange" data-color="#ff4500"></div>
+      <div class="change-color__item change-color__item--purple" data-color="#ee82ee"></div>
+      <div class="change-color__item change-color__item--blue" data-color="#0000ff"></div>
+      <div class="change-color__item change-color__item--yellow" data-color="#ffd700"></div>
+    </div>
+  </div>
   </header>
   <main class="main">
-    <article class="about">
+    <article id="about" class="about">
       <img src="assets/images/profile-image.jpg" alt="Imagen de Karim" class="image image--profile" />
       <div class="about__data">
         <div>
@@ -85,7 +93,7 @@
             belleza detrás de la construcción de sitios web útiles como el que
             encontrarás en este portfolio, me encuentro en la búsqueda de un
             puesto de desarrollador junior para finalmente comenzar mi carrera
-            y aprender entre profesionales
+            y aprender entre profesionales.
           </p>
         </div>
         <picture>
@@ -99,12 +107,12 @@
       <img src="assets/images/circle-skills-def.svg" alt="" class="vector vector-skill" />
       <p class="text skills__data">
         Me desenvuelvo bien con los lenguajes que he aprendido a utilizar en
-        el mastter de desarrollo web front-end impartido en la escuela Trazos,
+        el máster de desarrollo web front-end impartido en la escuela Trazos,
         html ,css y JavaScript, optimizando su uso con preprocesadores como
         Sass.
       </p>
     </article>
-    <article class="projects">
+    <article id="projects" class="projects">
       <picture>
         <source media="(min-width:1024px)" srcset="assets/images/desktop/deco-desktop-projects-left.svg" />
         <source media="(min-width:640px)" srcset="assets/images/tablet/deco-tablet-projects.svg" />
@@ -167,7 +175,7 @@
       <img src="assets/images/desktop/deco-desktop-projects-right.svg" alt="decoracion"
         class="decoration decoration--projects-right" />
     </article>
-    <article class="contact">
+    <article id="contact" class="contact">
       <div class="contact__data">
         <h2 class="title title--contact">CONTACTA CONMIGO</h2>
         <p class="text">Para mas información, escríbeme un correo</p>
@@ -227,12 +235,6 @@
       <img src="assets/images/mobile/deco-mobile-footer.svg" alt="Decoracion" class="decoration decoration--footer" />
     </picture>
   </footer>
-  <div id="change-color" class="change-color">
-    <div class="color color--orange" data-color="#ff4500"></div>
-    <div class="color color--purple" data-color="#ee82ee"></div>
-    <div class="color color--blue" data-color="#0000ff"></div>
-    <div class="color color--yellow" data-color="#ffd700"></div>
-  </div>
   <div class="modal" id="modal">
     <div class="modal__image-container">
       <h2 id="modal-title" class="modal__title"></h2>
