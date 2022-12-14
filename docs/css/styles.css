@@ -494,7 +494,7 @@ body.dark {
   color: var(--grey-text);
   font-family: var(--primary-font);
   line-height: 1.5rem;
-  transform: translateX(100px);
+  transform: translateX(50px);
   opacity: 0;
   transition: transform 3s, opacity 3s;
 }
@@ -1010,6 +1010,8 @@ body.dark {
 
 .vector-skill {
   margin-bottom: 3rem;
+  transform: translateY(200px);
+  transition: transform 3s;
   animation-name: loading;
   animation-duration: 20s;
   animation-iteration-count: infinite;
@@ -1031,6 +1033,10 @@ body.dark {
     transform: rotate(-360deg);
   }
 }
+.transition-vector {
+  transform: translateY(0);
+}
+
 .image {
   transform: scale(1);
   transition: transform 0.5s;
@@ -1043,7 +1049,7 @@ body.dark {
 .image--profile {
   clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 89%);
   filter: grayscale(1);
-  transform: translateX(-100px);
+  transform: translateY(100px);
   opacity: 0;
   transition: transform 4s opacity 4s;
 }
@@ -1056,7 +1062,7 @@ body.dark {
 }
 
 .transition-profile {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
 }
 

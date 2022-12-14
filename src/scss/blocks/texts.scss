@@ -5,7 +5,7 @@
     color: var(--grey-text);
     font-family: var(--primary-font);
     line-height: 1.5rem;
-    transform: translateX(100px);
+    transform: translateX(50px);
     opacity: 0;
     transition: transform 3s , opacity 3s;
     &--smaller{

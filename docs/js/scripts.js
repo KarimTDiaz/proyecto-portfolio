@@ -189,6 +189,9 @@ const callback = (entries) => {
             if (entry.target.classList.contains('text')) {
                 entry.target.classList.add('transition-text')
             }
+            if (entry.target.classList.contains('vector-skill')) {
+                entry.target.classList.add('transition-vector')
+            }
         }
     })
 }
@@ -197,6 +200,7 @@ const observer = new IntersectionObserver(callback, options)
 
 observer.observe(document.querySelector('.main-title'));
 observer.observe(document.querySelector('.image--profile'));
+observer.observe(document.querySelector('.vector-skill'));
 const galleryItemsObserve = document.querySelectorAll('.gallery__item');
 const titleObserve = document.querySelectorAll('.title');
 const textObserve = document.querySelectorAll('.text');
