@@ -14,6 +14,7 @@ const crossModal = document.getElementById('modal-cross')
 const changeColor = document.getElementById('change-color')
 const body = document.body;
 const darkmode = document.getElementById('toggle') 
+const vector = document.getElementById('vector')
 
 const titles = ['Colaborativo', 'Trabajo en equipo', 'Organización', 'Apasionado'];
 const rootStyles = document.documentElement.style;
@@ -163,6 +164,13 @@ darkmode.addEventListener('click', () => {
     body.classList.toggle('dark')
 })
 
+vector.addEventListener('transitionend',()=>{
+    console.log('TERMINADA')
+    vector.classList.add('animation-start')
+})
+
+
+
 const options = {
     root: null,
     rootMargin: '300px 300px',
@@ -176,25 +184,24 @@ const callback = (entries) => {
         if (entry.isIntersecting) {
             if (entry.target.classList.contains('gallery__item')) {
                 entry.target.classList.add('transition-gallery')
-            }
-            if (entry.target.classList.contains('main-title')) {
+            }else if (entry.target.classList.contains('main-title')) {
                 entry.target.classList.add('transition-main-title')
-            }
-            if (entry.target.classList.contains('image--profile')) {
+            }else if (entry.target.classList.contains('image--profile')) {
                 entry.target.classList.add('transition-profile')
-            }
-            if (entry.target.classList.contains('title')) {
+            }else if (entry.target.classList.contains('title')) {
                 entry.target.classList.add('transition-title')
-            }
-            if (entry.target.classList.contains('text')) {
+            }else if (entry.target.classList.contains('text')) {
                 entry.target.classList.add('transition-text')
+            }else if (entry.target.classList.contains('vector-skill')) {
+                entry.target.classList.add('transition-vector') 
             }
-            if (entry.target.classList.contains('vector-skill')) {
-                entry.target.classList.add('transition-vector')
-            }
+
+            
         }
     })
 }
+
+
 
 const observer = new IntersectionObserver(callback, options)
 

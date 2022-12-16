@@ -38,6 +38,7 @@
 
     @include responsive(laptop) {
         @include flexbox(flex, row, nowrap, space-between, center);
+        gap:10rem;
         height: 800px;
         background-color: var(--secondary-color);
         background-image: image.desktop('bg-desktop-about.svg');

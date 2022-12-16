@@ -398,6 +398,7 @@ html {
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 body.dark {
@@ -554,7 +555,7 @@ body.dark {
   z-index: -1;
   background-color: var(--white-text);
   transform: translate(-50%, -50%);
-  transition: all 0.6s ease;
+  transition: width 0.6s ease;
 }
 @media (hover: hover) {
   .button--animation:hover::before {
@@ -648,6 +649,7 @@ body.dark {
   transform-origin: right;
   transition: transform 0.4s;
   z-index: var(--z-index-10);
+  overflow: hidden;
 }
 .menu__item {
   position: relative;
@@ -662,22 +664,8 @@ body.dark {
   color: var(--white-text);
   font-family: var(--primary-font);
   font-size: var(--title-s);
-  animation-name: link-moving;
-  animation-duration: 2s;
-}
-@keyframes link-moving {
-  0% {
-    transform: translateX(10%);
-    opacity: 0.2;
-  }
-  50% {
-    transform: translateX(-10%);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  transform: translateX(40vw);
+  opacity: 0;
 }
 @media (hover: hover) {
   .menu__link:hover {
@@ -687,6 +675,8 @@ body.dark {
 @media screen and (min-width: 1024px) {
   .menu__link {
     font-size: var(--menu-item-desktop);
+    opacity: 1;
+    transform: translateX(0);
   }
   .menu__link::after {
     content: "";
@@ -707,6 +697,8 @@ body.dark {
 }
 .menu__link--footer {
   font-size: var(--text-l);
+  opacity: 1;
+  transform: translateX(0);
 }
 .menu__link--footer::after {
   top: 25px;
@@ -714,6 +706,11 @@ body.dark {
 }
 .menu--show {
   transform: translateX(0);
+}
+.menu--show .menu__link {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.7s 1s, opacity 0.7s 1s;
 }
 .menu--footer {
   align-items: center;
@@ -871,6 +868,7 @@ body.dark {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 10rem;
     height: 800px;
     background-color: var(--secondary-color);
     background-image: url("../assets/images/desktop/bg-desktop-about.svg");
@@ -977,7 +975,7 @@ body.dark {
 @media screen and (min-width: 1024px) {
   .decoration {
     left: auto;
-    right: 0px;
+    right: 0;
     bottom: -225px;
   }
 }
@@ -1008,14 +1006,19 @@ body.dark {
   bottom: 0;
 }
 
+.animation-start {
+  animation: loading 28s infinite ease;
+}
+@keyframes loading {
+  to {
+    rotate: -360deg;
+  }
+}
+
 .vector-skill {
   margin-bottom: 3rem;
-  transform: translateY(200px);
+  transform: scale(0);
   transition: transform 3s;
-  animation-name: loading;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 @media screen and (min-width: 640px) {
   .vector-skill {
@@ -1028,13 +1031,8 @@ body.dark {
   }
 }
 
-@keyframes loading {
-  0% {
-    transform: rotate(-360deg);
-  }
-}
 .transition-vector {
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .image {
@@ -1057,7 +1055,7 @@ body.dark {
   .image--profile {
     clip-path: none;
     width: 450px;
-    margin-left: 10rem;
+    margin-left: 20rem;
   }
 }
 

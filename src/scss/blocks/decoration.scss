@@ -1,4 +1,5 @@
 @use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as*;
 
 .decoration {
     position: absolute;
@@ -7,7 +8,7 @@
 
     @include responsive(laptop) {
         left: auto;
-        right: 0px;
+        right: 0;
         bottom: -225px;
     }
 

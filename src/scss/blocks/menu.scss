@@ -20,6 +20,7 @@
   transform-origin: right;
   transition: transform 0.4s;
   z-index: var(--z-index-10);
+  overflow: hidden;
   &__item {
     position: relative;
     margin-bottom: 4rem;
@@ -31,22 +32,10 @@
     color: var(--white-text);
     font-family: var(--primary-font);
     font-size: var(--title-s);
-    animation-name: link-moving;
-    animation-duration: 2s;
-    @keyframes link-moving {
-      0%{
-        transform: translateX(10%);
-        opacity: 0.2;
-      }
-      50%{
-        transform: translateX(-10%);
-        opacity: 0.5;
-      }
-      100%{
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
+    transform: translateX(40vw);
+    opacity: 0;
+    
+    
     @include hover{
       &:hover{
         color: var(--secondary-color);
@@ -55,6 +44,8 @@
 
     @include responsive(laptop) {
       font-size: var(--menu-item-desktop);
+      opacity: 1;
+      transform:translateX(0);
       &::after{
         @include pseudo(110% ,1%){
           top: 20px;
@@ -72,6 +63,8 @@
     }
     &--footer{
       font-size: var(--text-l);
+      opacity: 1;
+      transform: translateX(0);
       &::after{
           top: 25px;
           left: -5%;
@@ -82,6 +75,12 @@
 
   &--show {
     transform: translateX(0);
+
+    & .menu__link{
+      transform: translateX(0);
+      opacity: 1;
+      transition: transform .7s 1s ,opacity .7s 1s;
+    }
   }
   &--footer{
     align-items: center;
